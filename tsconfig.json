@@ -19,5 +19,8 @@
       "module": "CommonJS",
       "plugins": [{ "name": "typescript-plugin-css-modules" }]
     }
-  }
+  },
+  "include": [
+    "./config/jest/setupTests.ts"
+  ]
 }

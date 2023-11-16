@@ -1,11 +1,12 @@
-import { classNames } from './classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 
 describe('classNames', () => {
     test('with only first param', () => {
         expect(classNames('someClasses')).toBe('someClasses');
     });
     test('with additional class', () => {
-        expect(classNames('someClasses', {}, ['class1', 'class2'])).toBe('someClasses class1 class2');
+        expect(classNames('someClasses', {}, ['class1', 'class2']))
+            .toBe('someClasses class1 class2');
     });
     test('with mods', () => {
         expect(classNames(
