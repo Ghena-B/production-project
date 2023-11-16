@@ -1,5 +1,8 @@
 {
   "Welcome to React" : "Bun venit în React",
   "Translate" : "Tradu",
-  "Language": "Română"
+  "Language": "Română",
+  "Page Not Found": "Pagina nu a fost gasita",
+  "Something went wrong": "Something went wrong",
+  "Reload page": "Reload page"
 }
