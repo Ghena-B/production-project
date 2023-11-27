@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { useTranslation } from 'react-i18next';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -8,12 +9,15 @@ interface NavbarProps {
 
 }
 
-export const Navbar = ({ className }: NavbarProps) => (
-    <div className={classNames(cls.Navbar, {}, [className])}>
+export const Navbar = ({ className }: NavbarProps) => {
+    const { t } = useTranslation();
+    return (
+        <div className={classNames(cls.Navbar, {}, [className])}>
 
-        <div className={cls.links}>
-            <Link to="/" className={cls.mainLink}>Main</Link>
-            <Link to="/about">About</Link>
+            <div className={cls.links}>
+                <Link to="/" className={cls.mainLink}>{t('Main')}</Link>
+                <Link to="/about">{t('About')}</Link>
+            </div>
         </div>
-    </div>
-);
+    );
+};
