@@ -8,5 +8,11 @@
   "Main": "Main",
   "About": "About",
   "toggle": "toggle",
-  "Shorten": "RO"
+  "Shorten": "RO",
+  "Sing in": "Sing in",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
+    " Eos, nam": {
+      " ": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, nam. "
+    }
+  }
 }

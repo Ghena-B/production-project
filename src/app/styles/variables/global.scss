@@ -22,4 +22,8 @@
     --inverted-primary-color: #e8e8e8;
     --secondary-color: #151515;
     --inverted-secondary-color: hsl(0deg 0% 100% / 55%);
+    --overlay-color: rgb(0 0 0 / 60%);
+
+    // z-indexes
+    --modal-z-index: 10;
 }
