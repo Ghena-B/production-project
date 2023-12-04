@@ -1,0 +1,15 @@
+.InputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input {
+    height: 48px;
+    width: 400px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    padding-left: 8px;
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+}
