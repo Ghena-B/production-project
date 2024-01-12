@@ -7,10 +7,10 @@ import cls from './LoginModal.module.scss';
 
 interface LoginModalProps {
     className?: string,
-    isOpen?: boolean;
+    isOpen: boolean;
     onClose?: () => void;
 }
-export const LoginModal = ({ className, isOpen, onClose }: LoginModalProps) => (
+export const LoginModal = ({ className, isOpen, onClose = () => {} }: LoginModalProps) => (
     <Modal
         className={classNames(cls.LoginModal, {}, [className])}
         isOpen={isOpen}
