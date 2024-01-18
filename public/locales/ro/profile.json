@@ -11,5 +11,10 @@
   "Your city": "Your city",
   "Your username": "Your username",
   "Your avatar": "Your avatar",
-  "Select currency": "Select currency"
+  "Select currency": "Select currency",
+  "Server error while saving": "Server error while saving",
+  "Name and surname are mandatory": "Name and surname are mandatory",
+  "Incorrect age": "Incorrect age",
+  "Incorrect country": "Incorrect country",
+  "No data": "No data"
 }
