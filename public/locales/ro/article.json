@@ -1,5 +1,7 @@
 {
   "Article Page" : "Pagina cu Articole",
   "Article Details Page": "Article Details Page",
-  "Articles Page": "Articles Page"
+  "Articles Page": "Articles Page",
+  "Article not found": "Article not found",
+  "Some error occurred while loading the article": "Some error occurred while loading the article"
 }
