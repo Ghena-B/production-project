@@ -19,7 +19,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 999,
       "createdAt": "23.01.2024",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -100,6 +102,24 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "test1",
+      "id": "05PxH5K"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "test2",
+      "id": "OCsvvwW"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "hello",
+      "id": "lEcSu7b"
     }
   ],
   "users": [
@@ -116,17 +136,30 @@
       "password": "123",
       "role": "USER",
       "avatar": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png"
-
     }
   ],
-  "profile": {
-    "first": "Ghena",
-    "lastname": "B",
-    "age": 250,
-    "currency": "RON",
-    "country": "GERMANY",
-    "city": "Iasi",
-    "username": "admin",
-    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIY3mOQ9RyRtyy1IF5OA5OKVxxo9_cCAyTlAHpbAhtVenVNPmXJXQnWa_us9mOXqf9ivA&usqp=CAU"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Ghenadie",
+      "lastname": "B",
+      "age": 250,
+      "currency": "RON",
+      "country": "ROMANIA",
+      "city": "Iasi",
+      "username": "admin",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIY3mOQ9RyRtyy1IF5OA5OKVxxo9_cCAyTlAHpbAhtVenVNPmXJXQnWa_us9mOXqf9ivA&usqp=CAU"
+    },
+    {
+      "id": "2",
+      "first": "User",
+      "lastname": "2",
+      "age": 250,
+      "currency": "USD",
+      "country": "GERMANY",
+      "city": "Iasi",
+      "username": "user2",
+      "avatar": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png"
+    }
+  ]
 }

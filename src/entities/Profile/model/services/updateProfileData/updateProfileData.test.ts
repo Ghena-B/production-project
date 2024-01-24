@@ -13,6 +13,7 @@ const data = {
     country: Country.SPAIN,
     city: 'Madrid',
     currency: Currency.EUR,
+    id: '1',
 };
 describe('fetchProfileData.test', () => {
     test('success', async () => {
