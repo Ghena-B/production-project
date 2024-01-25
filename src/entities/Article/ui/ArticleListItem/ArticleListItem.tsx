@@ -13,7 +13,7 @@ import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleT
 import cls from './ArticleListItem.module.scss';
 import {
     Article, ArticleBlockType, ArticleTextBlock, ArticleView,
-} from '../../model/types/Article';
+} from '../../model/types/article';
 
 interface ArticleListItemProps {
     className?: string,
@@ -50,7 +50,6 @@ export const ArticleListItem = memo(({ className, article, view }: ArticleListIt
                     <Text text={article.title} className={cls.title} />
                     {types}
                     <img src={article.img} className={cls.img} alt={article.title} />
-                    \
                     {textBlock && (
                         <ArticleTextBlockComponent block={textBlock} className={cls.textBlock} />
                     )}

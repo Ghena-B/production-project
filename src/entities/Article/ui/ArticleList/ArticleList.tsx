@@ -4,7 +4,7 @@ import { memo } from 'react';
 import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import cls from './ArticleList.module.scss';
-import { Article, ArticleView } from '../../model/types/Article';
+import { Article, ArticleView } from '../../model/types/article';
 
 interface ArticleListProps {
     className?: string,
@@ -14,6 +14,7 @@ interface ArticleListProps {
 }
 const getSkeletons = (view: ArticleView) => (
     new Array(view === ArticleView.SMALL ? 9 : 3).fill(0).map((item, index) => (
+        // eslint-disable-next-line react/no-array-index-key
         <ArticleListItemSkeleton className={cls.card} key={index} view={view} />
     ))
 );
