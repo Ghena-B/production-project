@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Article } from 'entities/Article';
-import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
+import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/Article';
 import { ArticleDetails } from './ArticleDetails';
 
 const article: Article = {
@@ -13,6 +13,10 @@ const article: Article = {
     views: 999,
     createdAt: '23.01.2024',
     type: [ArticleType.IT],
+    user: {
+        id: '1',
+        username: 'Ghena B',
+    },
     blocks: [
         {
             id: '1',

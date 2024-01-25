@@ -1,13 +1,8 @@
-import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
-import { memo } from 'react';
-import { Article, ArticleList } from 'entities/Article';
-import cls from './ArticlesPage.module.scss';
+import React from 'react';
+import { ComponentStory, ComponentMeta, addDecorator } from '@storybook/react';
+import { Article, ArticleView } from '../../model/types/Article';
+import { ArticleListItem } from './ArticleListItem';
 
-interface ArticlesPageProps {
-    className?: string,
-
-}
 const article = {
     id: '1',
     title: 'Javascript news',
@@ -84,13 +79,24 @@ const article = {
         },
     ],
 } as Article;
-const ArticlesPage = ({ className }: ArticlesPageProps) => {
-    const { t } = useTranslation('article');
-    return (
-        <div className={classNames(cls.ArticlesPage, {}, [className])}>
-            <ArticleList articles={[article]} isLoading />
-        </div>
-    );
+export default {
+    title: 'shared/ArticleListItem',
+    component: ArticleListItem,
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
+} as ComponentMeta<typeof ArticleListItem>;
+
+const Template: ComponentStory<typeof ArticleListItem> = (args) => <ArticleListItem {...args} />;
+
+export const Big = Template.bind({});
+Big.args = {
+    view: ArticleView.BIG,
+    article,
 };
 
-export default memo(ArticlesPage);
+export const Small = Template.bind({});
+Small.args = {
+    view: ArticleView.SMALL,
+    article,
+};

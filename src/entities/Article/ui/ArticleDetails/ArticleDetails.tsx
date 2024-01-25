@@ -13,7 +13,7 @@ import { Icon } from 'shared/ui/Icon/Icon';
 import { ArticleTextBlockComponent } from '../../ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleImageBlockComponent } from '../../ui/ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleCodeBlockComponent } from '../../ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent';
-import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
+import { ArticleBlock, ArticleBlockType } from '../../model/types/Article';
 import {
     getArticleDetailsData,
     getArticleDetailsError,

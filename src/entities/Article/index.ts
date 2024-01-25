@@ -3,9 +3,11 @@ export {
 } from './ui/ArticleDetails/ArticleDetails';
 
 export type {
-    Article,
-} from './model/types/article';
+    Article, ArticleView,
+} from './model/types/Article';
 
 export {
     ArticleDetailsSchema,
 } from './model/types/articleDetailsSchema';
+
+export { ArticleList } from './ui/ArticleList/ArticleList';

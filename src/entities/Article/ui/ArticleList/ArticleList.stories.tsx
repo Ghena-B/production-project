@@ -1,13 +1,8 @@
-import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
-import { memo } from 'react';
-import { Article, ArticleList } from 'entities/Article';
-import cls from './ArticlesPage.module.scss';
+import React from 'react';
+import { ComponentStory, ComponentMeta, addDecorator } from '@storybook/react';
+import { Article, ArticleView } from '../../model/types/Article';
+import { ArticleList } from './ArticleList';
 
-interface ArticlesPageProps {
-    className?: string,
-
-}
 const article = {
     id: '1',
     title: 'Javascript news',
@@ -84,13 +79,50 @@ const article = {
         },
     ],
 } as Article;
-const ArticlesPage = ({ className }: ArticlesPageProps) => {
-    const { t } = useTranslation('article');
-    return (
-        <div className={classNames(cls.ArticlesPage, {}, [className])}>
-            <ArticleList articles={[article]} isLoading />
-        </div>
-    );
+export default {
+    title: 'entities/ArticleList',
+    component: ArticleList,
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
+} as ComponentMeta<typeof ArticleList>;
+
+const Template: ComponentStory<typeof ArticleList> = (args) => <ArticleList {...args} />;
+
+export const LoadingBig = Template.bind({});
+LoadingBig.args = {
+    articles: [],
+    isLoading: true,
+    view: ArticleView.BIG,
 };
 
-export default memo(ArticlesPage);
+export const LoadingSmall = Template.bind({});
+LoadingSmall.args = {
+    articles: [],
+    isLoading: true,
+    view: ArticleView.SMALL,
+};
+
+export const ListSmall = Template.bind({});
+ListSmall.args = {
+    articles: new Array(9)
+        .fill(0)
+        .map((item, index) => ({
+            ...article,
+            id: String(index),
+        })),
+    isLoading: false,
+    view: ArticleView.SMALL,
+};
+
+export const ListBig = Template.bind({});
+ListBig.args = {
+    articles: new Array(9)
+        .fill(0)
+        .map((item, index) => ({
+            ...article,
+            id: String(index),
+        })),
+    isLoading: false,
+    view: ArticleView.BIG,
+};
