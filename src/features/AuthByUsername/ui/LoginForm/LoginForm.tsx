@@ -6,7 +6,7 @@ import { useSelector, useStore } from 'react-redux';
 import { memo, useCallback, useEffect } from 'react';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { ReduxStoreWithManager } from 'app/providers/StoreProvider/config/StateSchema';
-import { DynanmicModuleLoader, ReducerList } from 'shared/lib/components/DynanmicModuleLoader/DynanmicModuleLoader';
+import { DynamicModuleLoader, ReducerList } from 'shared/lib/components/DynanmicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
@@ -50,7 +50,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
 
     return (
         // eslint-disable-next-line i18next/no-literal-string
-        <DynanmicModuleLoader removeAfterUnmount reducers={initialReducers}>
+        <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
             <div className={classNames(cls.LoginForm, {}, [className])}>
                 <Text title={t('Sign in')} />
                 {error && <Text text={error} theme={TextTheme.ERROR} />}
@@ -78,7 +78,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                     {t('Sing in')}
                 </Button>
             </div>
-        </DynanmicModuleLoader>
+        </DynamicModuleLoader>
     );
 });
 export default LoginForm;

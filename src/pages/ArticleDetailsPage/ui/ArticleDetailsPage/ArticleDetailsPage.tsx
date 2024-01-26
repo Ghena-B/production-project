@@ -5,13 +5,14 @@ import { ArticleDetails } from 'entities/Article';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Text } from 'shared/ui/Text/Text';
 import { CommentList } from 'entities/Comment';
-import { DynanmicModuleLoader, ReducerList } from 'shared/lib/components/DynanmicModuleLoader/DynanmicModuleLoader';
+import { DynamicModuleLoader, ReducerList } from 'shared/lib/components/DynanmicModuleLoader/DynamicModuleLoader';
 import { useSelector } from 'react-redux';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { AddCommentForm } from 'features/addCommentForm';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { Page } from 'shared/ui/Page/Page';
 import {
     fetchCommentsByArticleId,
 } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
@@ -45,21 +46,20 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     useInitialEffect(() => {
         dispatch(fetchCommentsByArticleId(id));
     });
-    if (!id) {
-        return (
-            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                {t('Article not found')}
-            </div>
-        );
-    }
     const navigate = useNavigate();
     const onBackToList = useCallback(() => {
         navigate(RoutePath.articles);
     }, [navigate]);
-
+    if (!id) {
+        return (
+            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+                {t('Article not found')}
+            </Page>
+        );
+    }
     return (
-        <DynanmicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <Button onClick={onBackToList} theme={ButtonTheme.OUTLINE}>
                     {t('Back to the list')}
                 </Button>
@@ -70,8 +70,8 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
                     comments={comments}
                     isLoading={commentsIsLoading}
                 />
-            </div>
-        </DynanmicModuleLoader>
+            </Page>
+        </DynamicModuleLoader>
     );
 };
 export default memo(ArticleDetailsPage);

@@ -5,7 +5,7 @@ import { Input } from 'shared/ui/Input/Input';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import { DynanmicModuleLoader, ReducerList } from 'shared/lib/components/DynanmicModuleLoader/DynanmicModuleLoader';
+import { DynamicModuleLoader, ReducerList } from 'shared/lib/components/DynanmicModuleLoader/DynamicModuleLoader';
 import { addCommentFormActions, addCommentFormReducer } from '../../model/slices/addCommentFormSlice';
 import {
     getAddCommentFormError,
@@ -34,7 +34,7 @@ const AddCommentForm = memo(({ className, onSendComment }: AddCommentFormProps) 
         onCommentTextChange('');
     }, [onCommentTextChange, onSendComment, text]);
     return (
-        <DynanmicModuleLoader reducers={reducers}>
+        <DynamicModuleLoader reducers={reducers}>
             <div className={classNames(cls.AddCommentForm, {}, [className])}>
                 <Input
                     className={cls.input}
@@ -49,7 +49,7 @@ const AddCommentForm = memo(({ className, onSendComment }: AddCommentFormProps) 
                     {t('Send')}
                 </Button>
             </div>
-        </DynanmicModuleLoader>
+        </DynamicModuleLoader>
     );
 });
 export default AddCommentForm;
