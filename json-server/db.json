@@ -17,8 +17,8 @@
       "title": "Javascript news",
       "subtitle": "What's New in JS for the Year 2024?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 999,
-      "createdAt": "23.01.2024",
+      "views": 5429,
+      "createdAt": "23.12.2023",
       "userId": "1",
       "type": [
         "IT"
@@ -89,8 +89,8 @@
       "title": "Python news2",
       "subtitle": "What's New in Python for the Year 2024?",
       "img": "https://www.ntuclearninghub.com/documents/39367/4216797/Python-Symbol.png/369e410e-a90f-f887-c2dc-61f7ef761476/",
-      "views": 1999,
-      "createdAt": "23.01.2024",
+      "views": 12999,
+      "createdAt": "12.01.2024",
       "userId": "1",
       "type": [
         "IT"
@@ -161,11 +161,11 @@
       "title": "Ruby news3",
       "subtitle": "What's New in Ruby for the Year 2024?",
       "img": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190902124355/ruby-programming-language.png",
-      "views": 999,
-      "createdAt": "23.01.2024",
+      "views": 93699,
+      "createdAt": "03.01.2024",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -228,11 +228,11 @@
       "title": "Javascript news",
       "subtitle": "What's New in JS for the Year 2024?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 999,
-      "createdAt": "23.01.2024",
-      "userId": "1",
+      "views": 1100,
+      "createdAt": "01.01.2024",
+      "userId": "2",
       "type": [
-        "IT"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -304,7 +304,8 @@
       "createdAt": "23.01.2024",
       "userId": "1",
       "type": [
-        "IT"
+        "IT",
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -376,7 +377,7 @@
       "createdAt": "23.01.2024",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {

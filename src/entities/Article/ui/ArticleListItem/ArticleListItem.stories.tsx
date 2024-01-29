@@ -13,6 +13,7 @@ const article = {
     user: {
         id: '1',
         username: 'Ghena B',
+        // eslint-disable-next-line max-len
         avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIY3mOQ9RyRtyy1IF5OA5OKVxxo9_cCAyTlAHpbAhtVenVNPmXJXQnWa_us9mOXqf9ivA&usqp=CAU',
     },
     type: [
@@ -24,14 +25,18 @@ const article = {
             type: 'TEXT',
             title: 'Title of this block',
             paragraphs: [
+                // eslint-disable-next-line max-len
                 "The program traditionally called 'Hello, world!' is very simple. It outputs a phrase like 'Hello, world!' or something similar using the features of a certain language.",
+                // eslint-disable-next-line max-len
                 "JavaScript is a language that allows you to run programs in different environments. In our case, we are talking about browsers and the server platform Node.js. If you haven't written a single line of JS code and are reading this text in a browser on your desktop computer, it means you are literally seconds away from your first JavaScript program.",
+                // eslint-disable-next-line max-len
                 "There are other ways to run JS code in the browser. For example, when it comes to the typical use of JavaScript programs, they are loaded into the browser to enable the functionality of web pages. Usually, the code is formatted as separate files with the extension .js, which are then connected to web pages. However, you can also include program code directly in the page's code. This is done using the <script> tag. When the browser detects such code, it executes it. Details about the script tag can be found on the w3school.com website. In particular, let's look at an example demonstrating the interaction with a web page using JavaScript, as shown on this resource. You can run this example using the tools on that resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, in VS Code or Notepad++) called hello.html and add the following code to it:",
             ],
         },
         {
             id: '4',
             type: 'CODE',
+            // eslint-disable-next-line max-len
             code: '<!DOCTYPE html>\n<html>\n  <body>\n    <p id="hello"></p>\n\n    <script>\n      document.getElementById("hello").innerHTML = "Hello, world!";\n    </script>\n  </body>\n</html>;',
         },
         {
@@ -39,7 +44,9 @@ const article = {
             type: 'TEXT',
             title: 'Title of this block',
             paragraphs: [
+                // eslint-disable-next-line max-len
                 "The program traditionally called 'Hello, world!' is very simple. It outputs a phrase like 'Hello, world!' or something similar using the features of a certain language.",
+                // eslint-disable-next-line max-len
                 "There are other ways to run JS code in the browser. For example, when it comes to the typical use of JavaScript programs, they are loaded into the browser to enable the functionality of web pages. Usually, the code is formatted as separate files with the extension .js, which are then connected to web pages. However, you can also include program code directly in the page's code. This is done using the <script> tag. When the browser detects such code, it executes it. Details about the script tag can be found on the w3school.com website. In particular, let's look at an example demonstrating the interaction with a web page using JavaScript, as shown on this resource. You can run this example using the tools on that resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, in VS Code or Notepad++) called hello.html and add the following code to it:",
             ],
         },
@@ -52,6 +59,7 @@ const article = {
         {
             id: '3',
             type: 'CODE',
+            // eslint-disable-next-line max-len
             code: "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);",
         },
         {
@@ -59,7 +67,9 @@ const article = {
             type: 'TEXT',
             title: 'Title of this block',
             paragraphs: [
+                // eslint-disable-next-line max-len
                 "JavaScript is a language that allows you to run programs in different environments. In our case, we are talking about browsers and the server platform Node.js. If you haven't written a single line of JS code and are reading this text in a browser on your desktop computer, it means you are literally seconds away from your first JavaScript program.",
+                // eslint-disable-next-line max-len
                 "There are other ways to run JS code in the browser. For example, when it comes to the typical use of JavaScript programs, they are loaded into the browser to enable the functionality of web pages. Usually, the code is formatted as separate files with the extension .js, which are then connected to web pages. However, you can also include program code directly in the page's code. This is done using the <script> tag. When the browser detects such code, it executes it. Details about the script tag can be found on the w3school.com website. In particular, let's look at an example demonstrating the interaction with a web page using JavaScript, as shown on this resource. You can run this example using the tools on that resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, in VS Code or Notepad++) called hello.html and add the following code to it:",
             ],
         },
@@ -74,13 +84,14 @@ const article = {
             type: 'TEXT',
             title: 'Title of this block',
             paragraphs: [
+                // eslint-disable-next-line max-len
                 "JavaScript is a language that allows you to run programs in different environments. In our case, we are talking about browsers and the server platform Node.js. If you haven't written a single line of JS code and are reading this text in a browser on your desktop computer, it means you are literally seconds away from your first JavaScript program.",
             ],
         },
     ],
 } as Article;
 export default {
-    title: 'shared/ArticleListItem',
+    title: 'entities/ArticleListItem',
     component: ArticleListItem,
     argTypes: {
         backgroundColor: { control: 'color' },
