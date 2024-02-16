@@ -5,6 +5,8 @@ export type BuildPaths = {
     build: string,
     html: string,
     src: string;
+    locales: string;
+    buildLocales: string;
 }
 export interface BuildOptions {
     mode: BuildMode,

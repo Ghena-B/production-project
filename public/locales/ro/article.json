@@ -1,11 +1,11 @@
 {
-  "Article Page" : "Pagina cu Articole",
-  "Article Details Page": "Article Details Page",
-  "Articles Page": "Articles Page",
-  "Article not found": "Article not found",
-  "Some error occurred while loading the article": "Some error occurred while loading the article",
-  "Comments": "Comments",
-  "Back to the list": "Back to the list",
-  "Recommendations": "Recommendations",
-  "Edit": "Edit"
+  "Article Page": "Pagina cu Articole",
+  "Article Details Page": "Pagina Detaliilor Articolului",
+  "Articles Page": "Pagina Articolelor",
+  "Article not found": "Articolul nu a fost găsit",
+  "Some error occurred while loading the article": "A apărut o eroare în timpul încărcării articolului",
+  "Comments": "Comentarii",
+  "Back to the list": "Înapoi la listă",
+  "Recommendations": "Recomandări",
+  "Edit": "Editează"
 }
