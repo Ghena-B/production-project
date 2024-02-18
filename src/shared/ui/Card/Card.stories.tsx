@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta, addDecorator } from '@storybook/react';
-import { Text } from 'shared/ui/Text/Text';
+import { Text } from '../Text/Text';
 import { Card } from './Card';
 
 export default {
@@ -15,5 +15,6 @@ const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {
+    // eslint-disable-next-line i18next/no-literal-string
     children: <Text title="test" text="here is some text" />,
 };

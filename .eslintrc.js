@@ -22,6 +22,7 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
+        'ghenabujag-plugin',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -42,7 +43,7 @@ module.exports = {
             markupOnly: true,
             ignoreAttribute: ['data-testid', 'to', 'placeholder', 'alt', 'target'],
         }],
-        'max-len': ['error', { ignoreComments: true, code: 120 }],
+        'max-len': ['warn', { ignoreComments: true, code: 150 }],
         'jsx-a11y/click-events-have-key-events': 'off',
         'jsx-a11y/no-static-element-interactions': 'off',
         'react-hooks/rules-of-hooks': 'error',
@@ -50,6 +51,7 @@ module.exports = {
         'no-param-reassign': 'off',
         'no-undef': 'off',
         'no-unused-vars': 'off',
+        'ghenabujag-plugin/path-checker': 'error',
         '@typescript-eslint/no-unused-vars': [
             'warn',
             { argsIgnorePattern: '^_' },
