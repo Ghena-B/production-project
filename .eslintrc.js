@@ -41,7 +41,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            ignoreAttribute: ['data-testid', 'to', 'placeholder', 'alt', 'target'],
+            ignoreAttribute: ['data-testid', 'to', 'placeholder', 'alt', 'target', 'direction', 'justify', 'align', 'gap'],
         }],
         'max-len': ['warn', { ignoreComments: true, code: 150 }],
         'jsx-a11y/click-events-have-key-events': 'off',
