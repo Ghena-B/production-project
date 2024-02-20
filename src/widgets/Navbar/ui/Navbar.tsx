@@ -8,6 +8,8 @@ import { getUserAuthData, userActions } from 'entities/User';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { Link } from 'react-router-dom';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -36,9 +38,21 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                 <Link to={RoutePath.article_create} className={cls.createBtn}>
                     {t('Add a new article')}
                 </Link>
-                <Button theme={ButtonTheme.CLEAR} className={cls.links} onClick={onLogout}>
-                    {t('Sign out')}
-                </Button>
+                <Dropdown
+                    direction="bottom left"
+                    className={cls.dropdown}
+                    items={[
+                        {
+                            content: t('User\'s profile'),
+                            href: RoutePath.profile + authData.id,
+                        },
+                        {
+                            content: t('Sign out'),
+                            onClick: onLogout,
+                        },
+                    ]}
+                    trigger={<Avatar size={30} src={authData.avatar} />}
+                />
             </header>
         );
     }
