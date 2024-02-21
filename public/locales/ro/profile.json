@@ -16,5 +16,6 @@
   "Name and surname are mandatory": "Numele și prenumele sunt obligatorii",
   "Incorrect age": "Vârsta incorectă",
   "Incorrect country": "Țara incorectă",
-  "No data": "Nicio informație"
+  "No data": "Nicio informație",
+  "Profile not found": "Profile not found"
 }

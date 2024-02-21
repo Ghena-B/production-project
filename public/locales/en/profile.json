@@ -16,5 +16,6 @@
   "Name and surname are mandatory": "Name and surname are mandatory",
   "Incorrect age": "Incorrect age",
   "Incorrect country": "Incorrect country",
-  "No data": "No data"
+  "No data": "No data",
+  "Profile not found": "Profile not found"
 }

@@ -62,7 +62,7 @@ const article: Article = {
     ],
 };
 export default {
-    title: 'pages/ArticleDetailsPage',
+    title: 'pages/ArticlesDetailsPage/ArticleDetailsPage',
     component: ArticleDetailsPage,
     argTypes: {
         backgroundColor: { control: 'color' },
