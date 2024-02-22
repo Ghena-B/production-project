@@ -8,7 +8,6 @@
   "Main": "Main",
   "About": "About",
   "toggle": "toggle",
-  "Shorten": "EN",
   "Sing in": "Sing in",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Eos, nam": {
@@ -50,5 +49,7 @@
   "User's profile": "User's profile",
   "Recommendations": "Recommendations",
   "Comments": "Comments",
-  "Error while loading articles": "Error while loading articles"
+  "Error while loading articles": "Error while loading articles",
+  "Shorten": "EN",
+  "You don't have access to this page": "You don't have access to this page"
 }

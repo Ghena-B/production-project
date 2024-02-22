@@ -8,7 +8,6 @@
   "Main": "Principal",
   "About": "Despre",
   "toggle": "comutare",
-  "Shorten": "RO",
   "Sing in": "Conectează-te",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Eos, nam": {
@@ -49,5 +48,7 @@
   "User's profile": "User's profile",
   "Recommendations": "Recommendations",
   "Comments": "Comments",
-  "Error while loading articles": "Error while loading articles"
+  "Error while loading articles": "Error while loading articles",
+  "Shorten": "RO",
+  "You don't have access to this page": "You don't have access to this page"
 }
