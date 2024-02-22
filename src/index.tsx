@@ -12,12 +12,14 @@ if (!container) {
     throw new Error('Container root was not found. React app was not mounted');
 }
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
-root.render(<BrowserRouter>
-    <StoreProvider>
-        <ErrorBoundary>
-            <ThemeProvider>
-                <App />
-            </ThemeProvider>
-        </ErrorBoundary>
-    </StoreProvider>
-</BrowserRouter>);
+root.render(
+    <BrowserRouter>
+        <StoreProvider>
+            <ErrorBoundary>
+                <ThemeProvider>
+                    <App />
+                </ThemeProvider>
+            </ErrorBoundary>
+        </StoreProvider>
+    </BrowserRouter>,
+);

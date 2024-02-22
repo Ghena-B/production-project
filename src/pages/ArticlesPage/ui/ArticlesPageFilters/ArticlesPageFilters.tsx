@@ -7,6 +7,7 @@ import {
     ArticleTypeTabs,
     ArticleView,
     ArticleViewSelector,
+    ArticleType,
 } from 'entities/Article';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { useSelector } from 'react-redux';
@@ -14,7 +15,6 @@ import { Card } from 'shared/ui/Card/Card';
 import { Input } from 'shared/ui/Input/Input';
 import { SortOrder } from 'shared/types';
 import { useDebounce } from 'shared/lib/hooks/useDebounce';
-import { ArticleType } from 'entities/Article/model/types/article';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import {
     getArticlesPageOrder,
