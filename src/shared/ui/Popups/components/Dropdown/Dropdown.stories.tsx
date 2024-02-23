@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Button } from '../Button/Button';
+import { Button } from '../../../Button/Button';
 import { Dropdown } from './Dropdown';
 
 export default {
@@ -16,7 +16,6 @@ const Template: ComponentStory<typeof Dropdown> = (args) => <Dropdown {...args} 
 
 export const Normal = Template.bind({});
 Normal.args = {
-    // eslint-disable-next-line i18next/no-literal-string
     trigger: <Button>Open</Button>,
     items: [
         {
