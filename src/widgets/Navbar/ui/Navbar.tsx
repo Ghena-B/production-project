@@ -15,6 +15,8 @@ import { HStack } from 'shared/ui/Stack';
 import { Dropdown } from 'shared/ui/Popups';
 import { NotificationButton } from 'features/notificationButton';
 import { AvatarDropdown } from 'features/avatarDropdown';
+import { Drawer } from 'shared/ui/Drawer/Drawer';
+import { NotificationList } from 'entities/Notification';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -32,7 +34,6 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     const onShowModal = useCallback(() => {
         setIsAuthModal(true);
     }, []);
-
     if (authData) {
         return (
             <header className={classNames(cls.Navbar, {}, [className])}>
