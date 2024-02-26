@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta, addDecorator } from '@storybook/react';
-import { Article } from 'entities/Article';
-import { ArticleBlockType, ArticleType } from 'entities/Article/model/consts/articleConsts';
+import { Article } from '@/entities/Article';
+import { ArticleBlockType, ArticleType } from '@/entities/Article/model/consts/articleConsts';
 import ArticleDetailsPage from './ArticleDetailsPage';
 
 const article: Article = {

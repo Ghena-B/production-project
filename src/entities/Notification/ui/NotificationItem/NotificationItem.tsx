@@ -1,9 +1,9 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
-import { Card, CardTheme } from 'shared/ui/Card/Card';
-import { Text } from 'shared/ui/Text/Text';
 import { Link } from 'react-router-dom';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Card, CardTheme } from '@/shared/ui/Card/Card';
+import { Text } from '@/shared/ui/Text/Text';
 import { Notification } from '../../model/types/notification';
 import cls from './NotificationItem.module.scss';
 

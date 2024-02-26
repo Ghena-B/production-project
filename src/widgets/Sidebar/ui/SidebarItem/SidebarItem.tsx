@@ -1,11 +1,11 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import MainIcon from 'shared/assets/icons/Main.svg';
 import { Link } from 'react-router-dom';
 import React, { memo } from 'react';
 import { useSelector } from 'react-redux';
-import { getUserAuthData } from 'entities/User';
+import MainIcon from '@/shared/assets/icons/Main.svg';
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { getUserAuthData } from '@/entities/User';
 import { SidebarItemType } from '../../model/types/sidebar';
 import cls from './SidebarItem.module.scss';
 

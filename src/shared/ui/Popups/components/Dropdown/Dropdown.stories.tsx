@@ -16,6 +16,7 @@ const Template: ComponentStory<typeof Dropdown> = (args) => <Dropdown {...args} 
 
 export const Normal = Template.bind({});
 Normal.args = {
+    // eslint-disable-next-line i18next/no-literal-string
     trigger: <Button>Open</Button>,
     items: [
         {

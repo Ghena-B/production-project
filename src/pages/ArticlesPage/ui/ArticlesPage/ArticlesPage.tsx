@@ -1,12 +1,12 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
-import { DynamicModuleLoader, ReducerList } from 'shared/lib/components/DynanmicModuleLoader/DynamicModuleLoader';
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { useSelector } from 'react-redux';
-import { Page } from 'widgets/Page/Page';
 import { useSearchParams } from 'react-router-dom';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { DynamicModuleLoader, ReducerList } from '@/shared/lib/components/DynanmicModuleLoader/DynamicModuleLoader';
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
+import { Page } from '@/widgets/Page/Page';
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';

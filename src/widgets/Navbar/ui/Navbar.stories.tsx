@@ -1,10 +1,10 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta, addDecorator } from '@storybook/react';
 
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { Primary } from 'features/AuthByUsername/ui/LoginForm/LoginForm.stories';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from '@/app/providers/ThemeProvider';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import { Primary } from '@/features/AuthByUsername/ui/LoginForm/LoginForm.stories';
 import { Navbar } from './Navbar';
 
 export default {

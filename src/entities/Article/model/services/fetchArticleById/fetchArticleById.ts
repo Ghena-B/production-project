@@ -1,9 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import i18n from 'i18next';
-import { ThunkConfig } from 'app/providers/StoreProvider';
-import { Page } from 'widgets/Page/Page';
-import { classNames } from 'shared/lib/classNames/classNames';
-import cls from 'pages/ArticleDetailsPage/ui/ArticleDetailsPage/ArticleDetailsPage.module.scss';
+import { ThunkConfig } from '@/app/providers/StoreProvider';
+import { Page } from '@/widgets/Page/Page';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import cls from '@/pages/ArticleDetailsPage/ui/ArticleDetailsPage/ArticleDetailsPage.module.scss';
 import { Article } from '../../types/article';
 
 export const fetchArticleById = createAsyncThunk<Article, string | undefined, ThunkConfig<string>>(
