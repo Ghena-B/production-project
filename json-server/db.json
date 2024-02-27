@@ -1375,21 +1375,27 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"],
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIY3mOQ9RyRtyy1IF5OA5OKVxxo9_cCAyTlAHpbAhtVenVNPmXJXQnWa_us9mOXqf9ivA&usqp=CAU"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png"
     },
     {
       "id": "3",
       "username": "manager",
       "password": "123",
-      "roles": ["MANAGER"],
+      "roles": [
+        "MANAGER"
+      ],
       "avatar": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png"
     }
   ],
@@ -1415,6 +1421,59 @@
       "city": "Iasi",
       "username": "user2",
       "avatar": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": "4",
+      "feedback": "It seems nice",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": "3",
+      "feedback": "Could be better",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "id": "3",
+      "rate": "5",
+      "feedback": "",
+      "userId": "2",
+      "articleId": "1"
+    },
+    {
+      "userId": "1",
+      "articleId": "4",
+      "rate": 5,
+      "feedback": "cool",
+      "id": "jFXeFKm"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": "4",
+      "feedback": "It seems nice",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": "3",
+      "feedback": "Could be better",
+      "userId": "1",
+      "profileId": "2"
+    },
+    {
+      "id": "3",
+      "rate": "5",
+      "feedback": "",
+      "userId": "2",
+      "profileId": "1"
     }
   ]
 }
