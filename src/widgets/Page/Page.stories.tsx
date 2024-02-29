@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta, addDecorator } from '@storybook/react';
 import { Page } from './Page';
 
 export default {
-    title: 'shared/Page',
+    title: 'widget/Page',
     component: Page,
     argTypes: {
         backgroundColor: { control: 'color' },
