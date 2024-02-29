@@ -51,7 +51,7 @@ module.exports = {
         'no-param-reassign': 'off',
         'no-undef': 'off',
         'no-unused-vars': 'off',
-        'ghenabujag-plugin/path-checker': 'error',
+        'ghenabujag-plugin/path-checker': ['error', { alias: '@' }],
         '@typescript-eslint/no-unused-vars': [
             'warn',
             { argsIgnorePattern: '^_' },
