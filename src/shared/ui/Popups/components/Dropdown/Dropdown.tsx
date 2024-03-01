@@ -45,14 +45,14 @@ export function Dropdown(props: DropdownProps) {
                             {item.content}
                         </button>
                     );
-
+                    const uniqueKey = `dropdown-key-${index}-${item.content}`;
                     if (item.href) {
                         return (
                             <Menu.Item
                                 as={Link}
                                 to={item.href}
                                 disabled={item.disabled}
-                                key={`dropdown-key-${index}`}
+                                key={uniqueKey}
                             >
                                 {content}
                             </Menu.Item>
@@ -63,7 +63,7 @@ export function Dropdown(props: DropdownProps) {
                         <Menu.Item
                             as={Fragment}
                             disabled={item.disabled}
-                            key={`dropdown-key-${index}`}
+                            key={uniqueKey}
                         >
                             {content}
                         </Menu.Item>
