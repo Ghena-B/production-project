@@ -5,7 +5,6 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
 import { Input } from '@/shared/ui/Input/Input';
 import { Text, TextTheme } from '@/shared/ui/Text/Text';
-import { ReduxStoreWithManager } from '@/app/providers/StoreProvider/config/StateSchema';
 import { DynamicModuleLoader, ReducerList } from '@/shared/lib/components/DynanmicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';

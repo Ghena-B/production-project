@@ -54,7 +54,11 @@ module.exports = {
         'ghenabujag-plugin/path-checker': ['error', { alias: '@' }],
         'ghenabujag-plugin/public-api-imports': ['error', {
             alias: '@',
-            testFilesPatterns: ['**/*.test.*', '**/*.stories.*', '**/StoreDecorator.tsx']
+            testFilesPatterns: ['**/*.test.*', '**/*.stories.*', '**/StoreDecorator.tsx'],
+        }],
+        'ghenabujag-plugin/layer-imports': ['error', {
+            alias: '@',
+            ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
         }],
         '@typescript-eslint/no-unused-vars': [
             'warn',
