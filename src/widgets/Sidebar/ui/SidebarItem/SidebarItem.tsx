@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import React, { memo } from 'react';
 import { useSelector } from 'react-redux';
 import MainIcon from '@/shared/assets/icons/Main.svg';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { getUserAuthData } from '@/entities/User';
 import { SidebarItemType } from '../../model/types/sidebar';
 import cls from './SidebarItem.module.scss';
+
+import { RoutePath } from '@/shared/const/router';
 
 interface SidebarItemProps {
     item: SidebarItemType;
