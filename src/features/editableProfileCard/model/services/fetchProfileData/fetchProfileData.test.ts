@@ -1,8 +1,8 @@
-import { userActions } from '@/entities/User';
-import { TestAsyncThunk } from '@/shared/lib/tests/testAsyncThunk/testAsyncThunk';
+import { fetchProfileData } from './fetchProfileData';
+
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
-import { fetchProfileData } from './fetchProfileData';
+import { TestAsyncThunk } from '@/shared/lib/tests/testAsyncThunk/testAsyncThunk';
 
 const data = {
     first: 'Ghena',

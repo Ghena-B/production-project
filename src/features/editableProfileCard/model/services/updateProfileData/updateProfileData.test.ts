@@ -1,8 +1,10 @@
-import { TestAsyncThunk } from '@/shared/lib/tests/testAsyncThunk/testAsyncThunk';
+import { ValidateProfileError } from '../../consts/consts';
+
+import { updateProfileData } from './updateProfileData';
+
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
-import { ValidateProfileError } from '../../consts/consts';
-import { updateProfileData } from './updateProfileData';
+import { TestAsyncThunk } from '@/shared/lib/tests/testAsyncThunk/testAsyncThunk';
 
 const data = {
     first: 'Ghena',

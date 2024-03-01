@@ -1,6 +1,6 @@
 /* eslint-disable i18next/no-literal-string */
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react';
 
 import { Flex } from './Flex';
 
