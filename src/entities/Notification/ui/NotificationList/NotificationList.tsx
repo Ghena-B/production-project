@@ -8,8 +8,6 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Skeleton } from '@/shared/ui/Skeleton';
 import { VStack } from '@/shared/ui/Stack';
 
-import cls from './NotificationList.module.scss';
-
 interface NotificationProps {
     className?: string;
 }
@@ -25,7 +23,7 @@ export const NotificationList = memo((props: NotificationProps) => {
             <VStack
                 gap="16"
                 max
-                className={classNames(cls.Notification, {}, [className])}
+                className={classNames('', {}, [className])}
             >
                 <Skeleton width="100%" border="8px" height="50px" />
                 <Skeleton width="100%" border="8px" height="50px" />
@@ -38,7 +36,7 @@ export const NotificationList = memo((props: NotificationProps) => {
         <VStack
             gap="16"
             max
-            className={classNames(cls.Notification, {}, [className])}
+            className={classNames('', {}, [className])}
         >
             {data?.map((item) => (
                 <NotificationItem item={item} key={item.id} />

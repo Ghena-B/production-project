@@ -10,8 +10,6 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Avatar } from '@/shared/ui/Avatar';
 import { Dropdown } from '@/shared/ui/Popups';
 
-import cls from './AvatarDropdown.module.scss';
-
 interface AvatarDropdownProps {
     className?: string,
 
@@ -32,7 +30,7 @@ export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
     }
     return (
         <Dropdown
-            className={classNames(cls.AvatarDropdown, {}, [className])}
+            className={classNames('', {}, [className])}
             direction="bottom left"
             items={[
                 ...(isAdminPanelAvailable ? [{
