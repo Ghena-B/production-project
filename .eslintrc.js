@@ -52,7 +52,10 @@ module.exports = {
         'no-undef': 'off',
         'no-unused-vars': 'off',
         'ghenabujag-plugin/path-checker': ['error', { alias: '@' }],
-        'ghenabujag-plugin/public-api-imports': ['error', { alias: '@' }],
+        'ghenabujag-plugin/public-api-imports': ['error', {
+            alias: '@',
+            testFilesPatterns: ['**/*.test.*', '**/*.stories.*', '**/StoreDecorator.tsx']
+        }],
         '@typescript-eslint/no-unused-vars': [
             'warn',
             { argsIgnorePattern: '^_' },
