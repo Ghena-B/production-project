@@ -5,12 +5,14 @@ interface BuildBabelLoaderProps extends BuildOptions {
     isTsx?: boolean;
 }
 export function buildBabelLoader({ isDev, isTsx }: BuildBabelLoaderProps) {
+    const isProd = !isDev;
     return {
         test: isTsx ? /\.(jsx|tsx)$/ : /\.(js|ts)$/,
         exclude: /node_modules/,
         use: {
             loader: 'babel-loader',
             options: {
+                cacheDirectory: true,
                 presets: ['@babel/preset-env'],
                 plugins: [
                     [
@@ -18,7 +20,7 @@ export function buildBabelLoader({ isDev, isTsx }: BuildBabelLoaderProps) {
                         { isTsx },
                     ],
                     '@babel/plugin-transform-runtime',
-                    isTsx && [
+                    isTsx && isProd && [
                         babelRemovePropsPlugin,
                         { props: ['data-testid'] },
                     ],
