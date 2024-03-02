@@ -10,7 +10,7 @@ const ProfilePage = () => {
     const { id } = useParams<{id: string}>();
     const { t } = useTranslation('profile');
     return (
-        <Page>
+        <Page data-testid="ProfilePage">
             <VStack gap="16" max>
                 <EditableProfileCard id={id} />
             </VStack>
