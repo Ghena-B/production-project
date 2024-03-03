@@ -3,6 +3,7 @@ import React from 'react';
 
 import AboutPage from './AboutPage';
 
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 
@@ -24,3 +25,5 @@ Dark.args = {};
 Dark.decorators = [
     ThemeDecorator(Theme.DARK),
 ];
+Light.decorators = [StoreDecorator({})];
+Dark.decorators = [StoreDecorator({})];

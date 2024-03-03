@@ -3,6 +3,7 @@ import React from 'react';
 
 import { NotFoundPage } from './NotFoundPage';
 
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 
@@ -23,4 +24,6 @@ export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [
     ThemeDecorator(Theme.DARK),
+    StoreDecorator({}),
 ];
+Light.decorators = [StoreDecorator({})];

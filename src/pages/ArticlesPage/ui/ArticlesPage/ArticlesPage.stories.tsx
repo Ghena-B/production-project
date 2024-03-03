@@ -3,6 +3,8 @@ import React from 'react';
 
 import ArticlesPage from './ArticlesPage';
 
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+
 export default {
     title: 'pages/ArticlesPage/ArticlesPage',
     component: ArticlesPage,
@@ -15,3 +17,4 @@ const Template: ComponentStory<typeof ArticlesPage> = (args) => <ArticlesPage {.
 
 export const Normal = Template.bind({});
 Normal.args = {};
+Normal.decorators = [StoreDecorator({})];
