@@ -1,5 +1,5 @@
 module.exports = {
-    staticDirs: ['./static'],
+    staticDirs: ['./shared/assets/tests'],
     stories: [
         '../../src/**/*.stories.@(js|jsx|ts|tsx)',
     ],
