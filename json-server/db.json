@@ -1312,6 +1312,32 @@
           ]
         }
       ]
+    },
+    {
+      "title": "Ruby news3",
+      "subtitle": "What's New in Ruby for the Year 2024?",
+      "img": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190902124355/ruby-programming-language.png",
+      "views": 999,
+      "createdAt": "23.01.2024",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "Lihuw4v"
+    },
+    {
+      "title": "Ruby news3",
+      "subtitle": "What's New in Ruby for the Year 2024?",
+      "img": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190902124355/ruby-programming-language.png",
+      "views": 999,
+      "createdAt": "23.01.2024",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "oVHB0dV"
     }
   ],
   "comments": [
@@ -1430,6 +1456,17 @@
       "city": "Iasi",
       "username": "user2",
       "avatar": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png"
+    },
+    {
+      "id": "4",
+      "first": "test",
+      "lastname": "user",
+      "age": 212,
+      "currency": "EUR",
+      "country": "GERMANY",
+      "city": "Iasi",
+      "username": "admin",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIY3mOQ9RyRtyy1IF5OA5OKVxxo9_cCAyTlAHpbAhtVenVNPmXJXQnWa_us9mOXqf9ivA&usqp=CAU"
     }
   ],
   "article-ratings": [

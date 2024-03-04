@@ -56,6 +56,7 @@ export const Flex = (props: FlexProps) => {
         children,
         gap,
         max,
+        ...otherProps
     } = props;
 
     const classes = [
@@ -71,7 +72,7 @@ export const Flex = (props: FlexProps) => {
     };
     const { t } = useTranslation();
     return (
-        <div className={classNames(cls.Flex, mods, classes)}>
+        <div className={classNames(cls.Flex, mods, classes)} {...otherProps}>
             {children}
         </div>
     );
