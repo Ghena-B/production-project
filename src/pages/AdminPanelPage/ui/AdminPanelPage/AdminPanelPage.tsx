@@ -9,17 +9,17 @@ interface AdminPanelPageProps {
 }
 
 const AdminPanelPage = memo((props: AdminPanelPageProps) => {
-    const { className } = props;
-    const { t } = useTranslation();
+  const { className } = props;
+  const { t } = useTranslation();
 
-    return (
-        // eslint-disable-next-line i18next/no-literal-string
-        <Page
-            data-testid="AdminPanelPage"
-            className={classNames('', {}, [className])}
-        >
-            Admin Panel
-        </Page>
-    );
+  return (
+  // eslint-disable-next-line i18next/no-literal-string
+    <Page
+      data-testid="AdminPanelPage"
+      className={classNames('', {}, [className])}
+    >
+      Admin Panel
+    </Page>
+  );
 });
 export default AdminPanelPage;

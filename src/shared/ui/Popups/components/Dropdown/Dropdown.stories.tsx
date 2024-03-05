@@ -6,30 +6,30 @@ import { Button } from '../../../Button/Button';
 import { Dropdown } from './Dropdown';
 
 export default {
-    title: 'shared/Dropdown',
-    component: Dropdown,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
+  title: 'shared/Dropdown',
+  component: Dropdown,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
 } as ComponentMeta<typeof Dropdown>;
 
 const Template: ComponentStory<typeof Dropdown> = (args) => (
-    <Dropdown {...args} />
+  <Dropdown {...args} />
 );
 
 export const Normal = Template.bind({});
 Normal.args = {
-    // eslint-disable-next-line i18next/no-literal-string
-    trigger: <Button>Open</Button>,
-    items: [
-        {
-            content: 'first',
-        },
-        {
-            content: 'second',
-        },
-        {
-            content: 'third',
-        },
-    ],
+  // eslint-disable-next-line i18next/no-literal-string
+  trigger: <Button>Open</Button>,
+  items: [
+    {
+      content: 'first',
+    },
+    {
+      content: 'second',
+    },
+    {
+      content: 'third',
+    },
+  ],
 };

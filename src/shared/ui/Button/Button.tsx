@@ -28,32 +28,32 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = memo((props: ButtonProps) => {
-    const {
-        className,
-        children,
-        theme = ButtonTheme.OUTLINE,
-        square,
-        size = ButtonSize.M,
-        disabled,
-        fullWidth,
-        ...otherProps
-    } = props;
-    return (
-        <button
-            type="button"
-            className={classNames(
-                cls.Button,
-                {
-                    [cls.square]: square,
-                    [cls.disabled]: disabled,
-                    [cls.fullWidth]: fullWidth,
-                },
-                [className, cls[theme], cls[size]],
-            )}
-            disabled={disabled}
-            {...otherProps}
-        >
-            {children}
-        </button>
-    );
+  const {
+    className,
+    children,
+    theme = ButtonTheme.OUTLINE,
+    square,
+    size = ButtonSize.M,
+    disabled,
+    fullWidth,
+    ...otherProps
+  } = props;
+  return (
+    <button
+      type="button"
+      className={classNames(
+        cls.Button,
+        {
+          [cls.square]: square,
+          [cls.disabled]: disabled,
+          [cls.fullWidth]: fullWidth,
+        },
+        [className, cls[theme], cls[size]],
+      )}
+      disabled={disabled}
+      {...otherProps}
+    >
+      {children}
+    </button>
+  );
 });

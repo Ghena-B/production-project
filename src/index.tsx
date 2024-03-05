@@ -12,18 +12,18 @@ import '@/app/styles/index.scss';
 
 const container = document.getElementById('root');
 if (!container) {
-    throw new Error('Container root was not found. React app was not mounted');
+  throw new Error('Container root was not found. React app was not mounted');
 }
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
 root.render(
-    <BrowserRouter>
-        <StoreProvider>
-            <ErrorBoundary>
-                <ThemeProvider>
-                    <App />
-                </ThemeProvider>
-            </ErrorBoundary>
-        </StoreProvider>
-    </BrowserRouter>,
+  <BrowserRouter>
+    <StoreProvider>
+      <ErrorBoundary>
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </ErrorBoundary>
+    </StoreProvider>
+  </BrowserRouter>,
 );
 export { Theme } from '@/shared/const/theme';

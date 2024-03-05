@@ -10,11 +10,11 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 import { Theme } from '@/shared/const/theme';
 
 export default {
-    title: 'pages/ProfilePage',
-    component: ProfilePage,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
+  title: 'pages/ProfilePage',
+  component: ProfilePage,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
 } as ComponentMeta<typeof ProfilePage>;
 
 const Template: ComponentStory<typeof ProfilePage> = () => <ProfilePage />;
@@ -22,36 +22,36 @@ const Template: ComponentStory<typeof ProfilePage> = () => <ProfilePage />;
 export const Light = Template.bind({});
 Light.args = {};
 Light.decorators = [
-    StoreDecorator({
-        profile: {
-            form: {
-                first: 'Ghena',
-                lastname: 'B',
-                username: 'Ghdsaena',
-                age: 100,
-                country: Country.SPAIN,
-                city: 'Madrid',
-                currency: Currency.EUR,
-            },
-        },
-    }),
+  StoreDecorator({
+    profile: {
+      form: {
+        first: 'Ghena',
+        lastname: 'B',
+        username: 'Ghdsaena',
+        age: 100,
+        country: Country.SPAIN,
+        city: 'Madrid',
+        currency: Currency.EUR,
+      },
+    },
+  }),
 ];
 
 export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [
-    ThemeDecorator(Theme.DARK),
-    StoreDecorator({
-        profile: {
-            form: {
-                first: 'Ghena',
-                lastname: 'B',
-                username: 'Ghdsaena',
-                age: 100,
-                country: Country.SPAIN,
-                city: 'Madrid',
-                currency: Currency.EUR,
-            },
-        },
-    }),
+  ThemeDecorator(Theme.DARK),
+  StoreDecorator({
+    profile: {
+      form: {
+        first: 'Ghena',
+        lastname: 'B',
+        username: 'Ghdsaena',
+        age: 100,
+        country: Country.SPAIN,
+        city: 'Madrid',
+        currency: Currency.EUR,
+      },
+    },
+  }),
 ];

@@ -11,28 +11,28 @@ export type FlexDirection = 'row' | 'column';
 export type FlexGap = '4' | '8' | '16' | '32';
 
 const justifyClasses: Record<FlexJustify, string> = {
-    start: cls.justifyStart,
-    center: cls.justifyCenter,
-    end: cls.justifyEnd,
-    between: cls.justifyBetween,
-    around: cls.justifyAround,
+  start: cls.justifyStart,
+  center: cls.justifyCenter,
+  end: cls.justifyEnd,
+  between: cls.justifyBetween,
+  around: cls.justifyAround,
 };
 
 const alignClasses: Record<FlexAlign, string> = {
-    start: cls.alignStart,
-    center: cls.alignCenter,
-    end: cls.alignEnd,
+  start: cls.alignStart,
+  center: cls.alignCenter,
+  end: cls.alignEnd,
 };
 
 const directionClasses: Record<FlexDirection, string> = {
-    row: cls.directionRow,
-    column: cls.directionColumn,
+  row: cls.directionRow,
+  column: cls.directionColumn,
 };
 const gapClasses: Record<FlexGap, string> = {
-    4: cls.gap4,
-    8: cls.gap8,
-    16: cls.gap16,
-    32: cls.gap32,
+  4: cls.gap4,
+  8: cls.gap8,
+  16: cls.gap16,
+  32: cls.gap32,
 };
 
 type DivProps = DetailedHTMLProps<
@@ -51,32 +51,32 @@ export interface FlexProps extends DivProps {
 }
 
 export const Flex = (props: FlexProps) => {
-    const {
-        className,
-        justify = 'start',
-        align = 'center',
-        direction = 'row',
-        children,
-        gap,
-        max,
-        ...otherProps
-    } = props;
+  const {
+    className,
+    justify = 'start',
+    align = 'center',
+    direction = 'row',
+    children,
+    gap,
+    max,
+    ...otherProps
+  } = props;
 
-    const classes = [
-        className,
-        justifyClasses[justify],
-        alignClasses[align],
-        directionClasses[direction],
-        gap && gapClasses[gap],
-    ];
+  const classes = [
+    className,
+    justifyClasses[justify],
+    alignClasses[align],
+    directionClasses[direction],
+    gap && gapClasses[gap],
+  ];
 
-    const mods: Mods = {
-        [cls.max]: max,
-    };
-    const { t } = useTranslation();
-    return (
-        <div className={classNames(cls.Flex, mods, classes)} {...otherProps}>
-            {children}
-        </div>
-    );
+  const mods: Mods = {
+    [cls.max]: max,
+  };
+  const { t } = useTranslation();
+  return (
+    <div className={classNames(cls.Flex, mods, classes)} {...otherProps}>
+      {children}
+    </div>
+  );
 };
