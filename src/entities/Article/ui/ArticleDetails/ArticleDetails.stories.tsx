@@ -1,7 +1,10 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 
-import { ArticleBlockType, ArticleType } from '../../model/consts/articleConsts';
+import {
+    ArticleBlockType,
+    ArticleType,
+} from '../../model/consts/articleConsts';
 import { Article } from '../../model/types/article';
 
 import { ArticleDetails } from './ArticleDetails';
@@ -26,29 +29,29 @@ const article: Article = {
             type: ArticleBlockType.TEXT,
             title: 'Title of this block',
             paragraphs: [
-                "The program traditionally called 'Hello, world!' is very simple. It outputs a phrase "
-                + "like 'Hello, world!' or something similar using the features of a certain language.",
-                'JavaScript is a language that allows you to run programs in different'
-                + ' environments. In our case, we are talking about browsers and the server platform Node.js. If you '
-                + "haven't written a single line of JS code and are reading this text in a browser "
-                + 'on your desktop computer, it means you are literally seconds away from your first JavaScript '
-                + 'program.',
-                'There are other ways to run JS code in the browser. For example, when it comes to the typical use of '
-                + 'JavaScript programs, '
-                + 'they are loaded into the browser to enable the functionality of web pages. Usually, '
-                + 'the code is formatted as separate files with the extension .js, which are '
-                + 'then connected to web pages. However, you can also include program code directly in the '
-                + "page's code. "
-                + 'This is done using the <script> tag. When the browser detects such code, it executes it. Details '
-                + "about the script tag can be found on the w3school.com website. In particular, let's look "
-                + 'at an example '
-                + 'demonstrating the interaction with a web page using JavaScript, as shown on this resource. '
-                + 'You can run '
-                + "this example using the tools on that resource (look for the 'Try it Yourself' button), but "
-                + "we'll do it "
-                + "a little differently. Specifically, we'll create a new file in a text editor (for example, "
-                + 'in VS Code '
-                + 'or Notepad++) called hello.html and add the following code to it:',
+                "The program traditionally called 'Hello, world!' is very simple. It outputs a phrase " +
+                    "like 'Hello, world!' or something similar using the features of a certain language.",
+                'JavaScript is a language that allows you to run programs in different' +
+                    ' environments. In our case, we are talking about browsers and the server platform Node.js. If you ' +
+                    "haven't written a single line of JS code and are reading this text in a browser " +
+                    'on your desktop computer, it means you are literally seconds away from your first JavaScript ' +
+                    'program.',
+                'There are other ways to run JS code in the browser. For example, when it comes to the typical use of ' +
+                    'JavaScript programs, ' +
+                    'they are loaded into the browser to enable the functionality of web pages. Usually, ' +
+                    'the code is formatted as separate files with the extension .js, which are ' +
+                    'then connected to web pages. However, you can also include program code directly in the ' +
+                    "page's code. " +
+                    'This is done using the <script> tag. When the browser detects such code, it executes it. Details ' +
+                    "about the script tag can be found on the w3school.com website. In particular, let's look " +
+                    'at an example ' +
+                    'demonstrating the interaction with a web page using JavaScript, as shown on this resource. ' +
+                    'You can run ' +
+                    "this example using the tools on that resource (look for the 'Try it Yourself' button), but " +
+                    "we'll do it " +
+                    "a little differently. Specifically, we'll create a new file in a text editor (for example, " +
+                    'in VS Code ' +
+                    'or Notepad++) called hello.html and add the following code to it:',
             ],
         },
         {
@@ -73,7 +76,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticleDetails>;
 
-const Template: ComponentStory<typeof ArticleDetails> = (args) => <ArticleDetails {...args} />;
+const Template: ComponentStory<typeof ArticleDetails> = (args) => (
+    <ArticleDetails {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {};

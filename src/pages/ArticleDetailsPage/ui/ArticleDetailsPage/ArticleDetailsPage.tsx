@@ -10,15 +10,17 @@ import { ArticleDetails } from '@/entities/Article';
 import { ArticleRating } from '@/features/articleRating';
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { DynamicModuleLoader, ReducerList } from '@/shared/lib/components/DynanmicModuleLoader/DynamicModuleLoader';
+import {
+    DynamicModuleLoader,
+    ReducerList,
+} from '@/shared/lib/components/DynanmicModuleLoader/DynamicModuleLoader';
 import { VStack } from '@/shared/ui/Stack';
 import { Page } from '@/widgets/Page';
 
 import cls from './ArticleDetailsPage.module.scss';
 
 interface ArticleDetailsPageProps {
-    className?: string,
-
+    className?: string;
 }
 
 const reducers: ReducerList = {
@@ -27,16 +29,15 @@ const reducers: ReducerList = {
 
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const { t } = useTranslation('article');
-    const { id } = useParams<{id: string}>();
+    const { id } = useParams<{ id: string }>();
     if (!id) {
         return null;
     }
     return (
-        <DynamicModuleLoader
-            reducers={reducers}
-            removeAfterUnmount
-        >
-            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+            <Page
+                className={classNames(cls.ArticleDetailsPage, {}, [className])}
+            >
                 <VStack gap="16" max>
                     <ArticleDetailsPageHeader />
                     <ArticleDetails id={id} />

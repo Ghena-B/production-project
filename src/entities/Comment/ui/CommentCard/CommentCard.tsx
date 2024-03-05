@@ -13,38 +13,60 @@ import { Text } from '@/shared/ui/Text';
 import cls from './CommentCard.module.scss';
 
 interface CommentCardProps {
-    className?: string,
-    comment?: Comment,
-    isLoading?: boolean,
+    className?: string;
+    comment?: Comment;
+    isLoading?: boolean;
 }
 
-export const CommentCard = memo(({ className, comment, isLoading }: CommentCardProps) => {
-    if (isLoading) {
+export const CommentCard = memo(
+    ({ className, comment, isLoading }: CommentCardProps) => {
+        if (isLoading) {
+            return (
+                <VStack
+                    data-testid="CommentCard.Loading"
+                    gap="8"
+                    max
+                    className={classNames(cls.CommentCard, {}, [
+                        className,
+                        cls.loading,
+                    ])}
+                >
+                    <div className={cls.header}>
+                        <Skeleton width={30} height={30} border="50%" />
+                        <Skeleton
+                            width={100}
+                            height={16}
+                            className={cls.username}
+                        />
+                    </div>
+                    <Skeleton width="100%" height={50} className={cls.text} />
+                </VStack>
+            );
+        }
+        if (!comment) {
+            return null;
+        }
         return (
             <VStack
-                data-testid="CommentCard.Loading"
+                data-testid="CommentCard.Content"
                 gap="8"
                 max
-                className={classNames(cls.CommentCard, {}, [className, cls.loading])}
+                className={classNames(cls.CommentCard, {}, [className])}
             >
-                <div className={cls.header}>
-                    <Skeleton width={30} height={30} border="50%" />
-                    <Skeleton width={100} height={16} className={cls.username} />
-                </div>
-                <Skeleton width="100%" height={50} className={cls.text} />
+                <Link
+                    to={getRouteProfile(comment.user.id)}
+                    className={cls.header}
+                >
+                    {comment.user.avatar ? (
+                        <Avatar size={30} src={comment.user.avatar} />
+                    ) : null}
+                    <Text
+                        className={cls.username}
+                        title={comment.user.username}
+                    />
+                </Link>
+                <Text className={cls.text} text={comment.text} />
             </VStack>
         );
-    }
-    if (!comment) {
-        return null;
-    }
-    return (
-        <VStack data-testid="CommentCard.Content" gap="8" max className={classNames(cls.CommentCard, {}, [className])}>
-            <Link to={getRouteProfile(comment.user.id)} className={cls.header}>
-                { comment.user.avatar ? <Avatar size={30} src={comment.user.avatar} /> : null}
-                <Text className={cls.username} title={comment.user.username} />
-            </Link>
-            <Text className={cls.text} text={comment.text} />
-        </VStack>
-    );
-});
+    },
+);

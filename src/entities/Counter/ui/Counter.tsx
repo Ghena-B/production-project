@@ -18,14 +18,15 @@ const Counter = () => {
     return (
         <div>
             {/* eslint-disable-next-line i18next/no-literal-string */}
-            <h1 data-testid="value-title">
-                value =
-                {counterValue}
-            </h1>
+            <h1 data-testid="value-title">value ={counterValue}</h1>
             {/* eslint-disable-next-line i18next/no-literal-string */}
-            <Button data-testid="increment-btn" onClick={increment}>increment</Button>
+            <Button data-testid="increment-btn" onClick={increment}>
+                increment
+            </Button>
             {/* eslint-disable-next-line i18next/no-literal-string */}
-            <Button data-testid="decrement-btn" onClick={decrement}>decrement</Button>
+            <Button data-testid="decrement-btn" onClick={decrement}>
+                decrement
+            </Button>
         </div>
     );
 };

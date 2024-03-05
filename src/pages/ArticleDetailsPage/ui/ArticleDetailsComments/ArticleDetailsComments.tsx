@@ -4,9 +4,7 @@ import { useSelector } from 'react-redux';
 
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
-import {
-    fetchCommentsByArticleId,
-} from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { getArticleComments } from '../../model/slices/articleDetailsCommentsSlice';
 
 import { CommentList } from '@/entities/Comment';
@@ -19,36 +17,38 @@ import { VStack } from '@/shared/ui/Stack';
 import { Text, TextSize } from '@/shared/ui/Text';
 
 interface ArticleDetailsCommentsProps {
-    className?: string,
+    className?: string;
     id?: string;
 }
 
-export const ArticleDetailsComments = memo(({ className, id }: ArticleDetailsCommentsProps) => {
-    const { t } = useTranslation();
-    const dispatch = useAppDispatch();
-    const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
-    const comments = useSelector(getArticleComments.selectAll);
-    const onSendComment = useCallback((text: string) => {
-        dispatch(addCommentForArticle(text));
-    }, [dispatch]);
+export const ArticleDetailsComments = memo(
+    ({ className, id }: ArticleDetailsCommentsProps) => {
+        const { t } = useTranslation();
+        const dispatch = useAppDispatch();
+        const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
+        const comments = useSelector(getArticleComments.selectAll);
+        const onSendComment = useCallback(
+            (text: string) => {
+                dispatch(addCommentForArticle(text));
+            },
+            [dispatch],
+        );
 
-    useInitialEffect(() => {
-        dispatch(fetchCommentsByArticleId(id));
-    });
+        useInitialEffect(() => {
+            dispatch(fetchCommentsByArticleId(id));
+        });
 
-    return (
-        <VStack gap="16" max className={classNames('', {}, [className])}>
-            <Text
-                size={TextSize.L}
-                title={t('Comments')}
-            />
-            <Suspense fallback={<Skeleton height={30} width="100%" />}>
-                <AddCommentForm onSendComment={onSendComment} />
-            </Suspense>
-            <CommentList
-                comments={comments}
-                isLoading={commentsIsLoading}
-            />
-        </VStack>
-    );
-});
+        return (
+            <VStack gap="16" max className={classNames('', {}, [className])}>
+                <Text size={TextSize.L} title={t('Comments')} />
+                <Suspense fallback={<Skeleton height={30} width="100%" />}>
+                    <AddCommentForm onSendComment={onSendComment} />
+                </Suspense>
+                <CommentList
+                    comments={comments}
+                    isLoading={commentsIsLoading}
+                />
+            </VStack>
+        );
+    },
+);

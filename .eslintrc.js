@@ -5,6 +5,7 @@ module.exports = {
         jest: true,
     },
     extends: [
+        'prettier',
         'plugin:react/recommended',
         'airbnb',
         'plugin:i18next/recommended',
@@ -27,10 +28,10 @@ module.exports = {
         'import',
     ],
     rules: {
-        'react/jsx-indent': [2, 4],
-        'react/jsx-indent-props': [2, 4],
-        indent: [2, 4],
-        'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
+        'react/jsx-filename-extension': [
+            2,
+            { extensions: ['.js', '.jsx', '.tsx'] },
+        ],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'react/require-default-props': 'off',
@@ -41,10 +42,26 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
-        'i18next/no-literal-string': ['error', {
-            markupOnly: true,
-            ignoreAttribute: ['data-testid', 'as', 'to', 'placeholder', 'alt', 'target', 'direction', 'justify', 'align', 'gap', 'role', 'border'],
-        }],
+        'i18next/no-literal-string': [
+            'error',
+            {
+                markupOnly: true,
+                ignoreAttribute: [
+                    'data-testid',
+                    'as',
+                    'to',
+                    'placeholder',
+                    'alt',
+                    'target',
+                    'direction',
+                    'justify',
+                    'align',
+                    'gap',
+                    'role',
+                    'border',
+                ],
+            },
+        ],
         'max-len': ['warn', { ignoreComments: true, code: 150 }],
         'jsx-a11y/click-events-have-key-events': 'off',
         'jsx-a11y/no-static-element-interactions': 'off',
@@ -55,14 +72,24 @@ module.exports = {
         'no-unused-vars': 'off',
         'unused-imports/no-unused-imports': 'error',
         'ghenabujag-plugin/path-checker': ['error', { alias: '@' }],
-        'ghenabujag-plugin/public-api-imports': ['error', {
-            alias: '@',
-            testFilesPatterns: ['**/*.test.*', '**/*.stories.*', '**/StoreDecorator.tsx'],
-        }],
-        'ghenabujag-plugin/layer-imports': ['error', {
-            alias: '@',
-            ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
-        }],
+        'ghenabujag-plugin/public-api-imports': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: [
+                    '**/*.test.*',
+                    '**/*.stories.*',
+                    '**/StoreDecorator.tsx',
+                ],
+            },
+        ],
+        'ghenabujag-plugin/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            },
+        ],
         '@typescript-eslint/no-unused-vars': [
             'warn',
             { argsIgnorePattern: '^_' },
@@ -89,6 +116,7 @@ module.exports = {
                 },
             },
         ],
+        'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
     },
     globals: {
         __IS_DEV__: true,
@@ -96,10 +124,12 @@ module.exports = {
         __PROJECT__: true,
         React: 'readonly',
     },
-    overrides: [{
-        files: ['**/src/**/*.test.{ts,tsx}'],
-        rules: {
-            'i18next/no-literal-string': 'off',
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
         },
-    }],
+    ],
 };

@@ -7,7 +7,7 @@ import { VStack } from '@/shared/ui/Stack';
 import { Page } from '@/widgets/Page';
 
 const ProfilePage = () => {
-    const { id } = useParams<{id: string}>();
+    const { id } = useParams<{ id: string }>();
     const { t } = useTranslation('profile');
     return (
         <Page data-testid="ProfilePage">

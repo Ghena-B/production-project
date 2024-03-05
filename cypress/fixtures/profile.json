@@ -1,11 +1,11 @@
 {
-  "id": "4",
-  "first": "test",
-  "lastname": "user",
-  "age": 212,
-  "currency": "EUR",
-  "country": "GERMANY",
-  "city": "Iasi",
-  "username": "admin",
-  "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIY3mOQ9RyRtyy1IF5OA5OKVxxo9_cCAyTlAHpbAhtVenVNPmXJXQnWa_us9mOXqf9ivA&usqp=CAU"
+    "id": "4",
+    "first": "test",
+    "lastname": "user",
+    "age": 212,
+    "currency": "EUR",
+    "country": "GERMANY",
+    "city": "Iasi",
+    "username": "admin",
+    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIY3mOQ9RyRtyy1IF5OA5OKVxxo9_cCAyTlAHpbAhtVenVNPmXJXQnWa_us9mOXqf9ivA&usqp=CAU"
 }

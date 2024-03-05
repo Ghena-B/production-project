@@ -13,7 +13,7 @@ import { VStack } from '@/shared/ui/Stack';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
-    className?: string,
+    className?: string;
 }
 
 export const Sidebar = memo(({ className }: SidebarProps) => {
@@ -25,7 +25,9 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
     return (
         <section
             data-testid="sidebar"
-            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
+            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
+                className,
+            ])}
         >
             <Button
                 data-testid="sidebar-toggle"

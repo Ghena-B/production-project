@@ -33,9 +33,7 @@ ErrorDark.args = {
     text: 'text example is here',
     theme: TextTheme.ERROR,
 };
-ErrorDark.decorators = [
-    ThemeDecorator(Theme.DARK),
-];
+ErrorDark.decorators = [ThemeDecorator(Theme.DARK)];
 export const OnlyTitle = Template.bind({});
 OnlyTitle.args = {
     title: 'Here is a title',
@@ -49,23 +47,17 @@ PrimaryDark.args = {
     title: 'Here is a title',
     text: 'text example is here',
 };
-PrimaryDark.decorators = [
-    ThemeDecorator(Theme.DARK),
-];
+PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
 export const OnlyTitleDark = Template.bind({});
 OnlyTitleDark.args = {
     title: 'Here is a title',
 };
-OnlyTitleDark.decorators = [
-    ThemeDecorator(Theme.DARK),
-];
+OnlyTitleDark.decorators = [ThemeDecorator(Theme.DARK)];
 export const OnlyTextDark = Template.bind({});
 OnlyTextDark.args = {
     text: 'text example is here',
 };
-OnlyTextDark.decorators = [
-    ThemeDecorator(Theme.DARK),
-];
+OnlyTextDark.decorators = [ThemeDecorator(Theme.DARK)];
 export const SizeL = Template.bind({});
 SizeL.args = {
     title: 'Here is a title',

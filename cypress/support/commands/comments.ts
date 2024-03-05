@@ -8,7 +8,7 @@ export const getByTestId = (testId: string) => cy.get(selectByTestId(testId));
 declare global {
     namespace Cypress {
         interface Chainable {
-            addComment(text: string): Chainable<void>
+            addComment(text: string): Chainable<void>;
         }
     }
 }

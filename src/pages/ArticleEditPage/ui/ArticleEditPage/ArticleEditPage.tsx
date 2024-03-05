@@ -8,8 +8,7 @@ import { Page } from '@/widgets/Page';
 import cls from './ArticleEditPage.module.scss';
 
 interface ArticleEditPageProps {
-    className?: string,
-
+    className?: string;
 }
 
 const ArticleEditPage = memo(({ className }: ArticleEditPageProps) => {
@@ -18,8 +17,7 @@ const ArticleEditPage = memo(({ className }: ArticleEditPageProps) => {
     const isEdit = Boolean(id);
     return (
         <Page className={classNames(cls.ArticleEditPage, {}, [className])}>
-            {isEdit ? t('Edit article with ID ') + id
-                : t('Add a new article')}
+            {isEdit ? t('Edit article with ID ') + id : t('Add a new article')}
         </Page>
     );
 });

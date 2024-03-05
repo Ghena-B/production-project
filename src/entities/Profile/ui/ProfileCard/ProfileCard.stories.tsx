@@ -17,7 +17,9 @@ export default {
     },
 } as ComponentMeta<typeof ProfileCard>;
 
-const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...args} />;
+const Template: ComponentStory<typeof ProfileCard> = (args) => (
+    <ProfileCard {...args} />
+);
 
 export const Primary = Template.bind({});
 Primary.args = {
@@ -37,13 +39,15 @@ export const WithError = Template.bind({});
 WithError.args = {
     error: 'true',
 };
-WithError.decorators = [StoreDecorator({
-    loginForm: {
-        username: 'user',
-        password: '123',
-        error: 'Error message',
-    },
-})];
+WithError.decorators = [
+    StoreDecorator({
+        loginForm: {
+            username: 'user',
+            password: '123',
+            error: 'Error message',
+        },
+    }),
+];
 export const Loading = Template.bind({});
 Loading.args = {
     isLoading: true,

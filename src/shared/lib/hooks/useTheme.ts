@@ -5,8 +5,8 @@ import { Theme } from '../../const/theme';
 import { ThemeContext } from '../context/ThemeContext';
 
 interface UseThemeResult {
-    toggleTheme: () => void,
-    theme: Theme
+    toggleTheme: () => void;
+    theme: Theme;
 }
 export function useTheme(): UseThemeResult {
     const { theme, setTheme } = useContext(ThemeContext);
@@ -14,17 +14,17 @@ export function useTheme(): UseThemeResult {
     const toggleTheme = () => {
         let newTheme: Theme;
         switch (theme) {
-        case Theme.LIGHT:
-            newTheme = Theme.DARK;
-            break;
-        case Theme.DARK:
-            newTheme = Theme.GREEN;
-            break;
-        case Theme.GREEN:
-            newTheme = Theme.LIGHT;
-            break;
-        default:
-            newTheme = Theme.LIGHT;
+            case Theme.LIGHT:
+                newTheme = Theme.DARK;
+                break;
+            case Theme.DARK:
+                newTheme = Theme.GREEN;
+                break;
+            case Theme.GREEN:
+                newTheme = Theme.LIGHT;
+                break;
+            default:
+                newTheme = Theme.LIGHT;
         }
         setTheme?.(newTheme);
         document.body.className = newTheme;
