@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 
 import {
-  getArticlesPageError,
-  getArticlesPageIsLoading,
-  getArticlesPageView,
+    getArticlesPageError,
+    getArticlesPageIsLoading,
+    getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
 import { getArticles } from '../../model/slices/articlesPageSlice';
 
@@ -18,24 +18,24 @@ interface ArticleInfiniteListProps {
 }
 
 export const ArticleInfiniteList = memo(
-  ({ className }: ArticleInfiniteListProps) => {
-    const { t } = useTranslation();
-    const dispatch = useAppDispatch();
-    const articles = useSelector(getArticles.selectAll);
-    const isLoading = useSelector(getArticlesPageIsLoading);
-    const error = useSelector(getArticlesPageError);
-    const view = useSelector(getArticlesPageView);
+    ({ className }: ArticleInfiniteListProps) => {
+        const { t } = useTranslation();
+        const dispatch = useAppDispatch();
+        const articles = useSelector(getArticles.selectAll);
+        const isLoading = useSelector(getArticlesPageIsLoading);
+        const error = useSelector(getArticlesPageError);
+        const view = useSelector(getArticlesPageView);
 
-    if (error) {
-      return <Text text={t('Error while loading articles')} />;
-    }
-    return (
-      <ArticleList
-        articles={articles}
-        isLoading={isLoading}
-        view={view}
-        className={className}
-      />
-    );
-  },
+        if (error) {
+            return <Text text={t('Error while loading articles')} />;
+        }
+        return (
+            <ArticleList
+                articles={articles}
+                isLoading={isLoading}
+                view={view}
+                className={className}
+            />
+        );
+    },
 );

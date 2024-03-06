@@ -9,25 +9,25 @@ export const fetchCommentsByArticleId = createAsyncThunk<
     string | undefined,
     ThunkConfig<string>
 >('articleDetails/fetchCommentsByArticleId', async (articleId, thunkAPI) => {
-  const { extra, rejectWithValue } = thunkAPI;
-  if (!articleId) {
-    return rejectWithValue('error');
-  }
-  try {
-    const response = await extra.api.get<Comment[]>('/comments', {
-      params: {
-        articleId,
-        _expand: 'user',
-      },
-    });
-    if (!response.data) {
-      throw new Error();
+    const { extra, rejectWithValue } = thunkAPI;
+    if (!articleId) {
+        return rejectWithValue('error');
     }
-    return response.data;
-  } catch (e) {
-    console.log(e);
-    return rejectWithValue(
-      i18n.t('The username or password is incorrect', { ns: 'auth' }),
-    );
-  }
+    try {
+        const response = await extra.api.get<Comment[]>('/comments', {
+            params: {
+                articleId,
+                _expand: 'user',
+            },
+        });
+        if (!response.data) {
+            throw new Error();
+        }
+        return response.data;
+    } catch (e) {
+        console.log(e);
+        return rejectWithValue(
+            i18n.t('The username or password is incorrect', { ns: 'auth' }),
+        );
+    }
 });

@@ -6,6 +6,6 @@ import { articleDetailsCommentsReducer } from './articleDetailsCommentsSlice';
 import { articleDetailsRecommendationsReducer } from './articleDetailsRecommendationsSlice';
 
 export const articleDetailsPageReducer = combineReducers<ArticleDetailsPageSchema>({
-  recommendations: articleDetailsRecommendationsReducer,
-  comments: articleDetailsCommentsReducer,
+    recommendations: articleDetailsRecommendationsReducer,
+    comments: articleDetailsCommentsReducer,
 });

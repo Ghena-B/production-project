@@ -1,9 +1,9 @@
 import {
-  ImgHTMLAttributes,
-  memo,
-  ReactElement,
-  useLayoutEffect,
-  useState,
+    ImgHTMLAttributes,
+    memo,
+    ReactElement,
+    useLayoutEffect,
+    useState,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -14,33 +14,33 @@ interface AppImageProps extends ImgHTMLAttributes<HTMLImageElement> {
 }
 
 export const AppImage = memo((props: AppImageProps) => {
-  const {
-    className,
-    alt = 'image',
-    src,
-    errorFallback,
-    fallback,
-    ...otherProps
-  } = props;
-  const { t } = useTranslation();
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-  useLayoutEffect(() => {
-    const img = new Image();
-    img.src = src ?? '';
-    img.onload = () => {
-      setIsLoading(false);
-    };
-    img.onerror = () => {
-      setIsLoading(false);
-      setHasError(true);
-    };
-  }, [src]);
-  if (isLoading && fallback) {
-    return fallback;
-  }
-  if (hasError && errorFallback) {
-    return errorFallback;
-  }
-  return <img className={className} src={src} alt={alt} {...otherProps} />;
+    const {
+        className,
+        alt = 'image',
+        src,
+        errorFallback,
+        fallback,
+        ...otherProps
+    } = props;
+    const { t } = useTranslation();
+    const [isLoading, setIsLoading] = useState(true);
+    const [hasError, setHasError] = useState(false);
+    useLayoutEffect(() => {
+        const img = new Image();
+        img.src = src ?? '';
+        img.onload = () => {
+            setIsLoading(false);
+        };
+        img.onerror = () => {
+            setIsLoading(false);
+            setHasError(true);
+        };
+    }, [src]);
+    if (isLoading && fallback) {
+        return fallback;
+    }
+    if (hasError && errorFallback) {
+        return errorFallback;
+    }
+    return <img className={className} src={src} alt={alt} {...otherProps} />;
 });

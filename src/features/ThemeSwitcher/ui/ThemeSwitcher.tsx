@@ -12,14 +12,14 @@ interface ThemeSwitcherProps {
 }
 
 export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
-  const { theme, toggleTheme } = useTheme();
-  return (
-    <Button
-      theme={ButtonTheme.CLEAR}
-      onClick={toggleTheme}
-      className={classNames('', {}, [className])}
-    >
-      {theme === Theme.LIGHT ? <LightIcon /> : <DarkIcon />}
-    </Button>
-  );
+    const { theme, toggleTheme } = useTheme();
+    return (
+        <Button
+            theme={ButtonTheme.CLEAR}
+            onClick={toggleTheme}
+            className={classNames('', {}, [className])}
+        >
+            {theme === Theme.LIGHT ? <LightIcon /> : <DarkIcon />}
+        </Button>
+    );
 });

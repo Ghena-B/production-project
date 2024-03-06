@@ -9,17 +9,17 @@ import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/testing';
 import { ReducerList } from '@/shared/lib/components/DynanmicModuleLoader/DynamicModuleLoader';
 
 const defaultAsyncReducers: ReducerList = {
-  loginForm: loginReducer,
-  profile: profileReducer,
-  articleDetails: articleDetailsReducer,
-  addCommentForm: addCommentFormReducer,
-  articleDetailsPage: articleDetailsPageReducer,
+    loginForm: loginReducer,
+    profile: profileReducer,
+    articleDetails: articleDetailsReducer,
+    addCommentForm: addCommentFormReducer,
+    articleDetailsPage: articleDetailsPageReducer,
 };
 export const StoreDecorator = (state: DeepPartial<StateSchema>, asyncReducers?: ReducerList) => (StoryComponent: Story) => (
-  <StoreProvider
-    initialState={state}
-    asyncReducers={{ ...defaultAsyncReducers, ...asyncReducers }}
-  >
-    <StoryComponent />
-  </StoreProvider>
+    <StoreProvider
+        initialState={state}
+        asyncReducers={{ ...defaultAsyncReducers, ...asyncReducers }}
+    >
+        <StoryComponent />
+    </StoreProvider>
 );

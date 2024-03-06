@@ -15,18 +15,18 @@ interface SidebarItemProps {
     collapsed: boolean;
 }
 export const SidebarItem = memo(({ item, collapsed }: SidebarItemProps) => {
-  const { t } = useTranslation();
-  const isAuth = useSelector(getUserAuthData);
-  if (item.authOnly && !isAuth) {
-    return null;
-  }
-  return (
-    <Link
-      to={item.path}
-      className={classNames(cls.item, { [cls.collapsed]: collapsed })}
-    >
-      <item.Icon className={cls.icon} />
-      <span className={cls.link}>{t(item.text)}</span>
-    </Link>
-  );
+    const { t } = useTranslation();
+    const isAuth = useSelector(getUserAuthData);
+    if (item.authOnly && !isAuth) {
+        return null;
+    }
+    return (
+        <Link
+            to={item.path}
+            className={classNames(cls.item, { [cls.collapsed]: collapsed })}
+        >
+            <item.Icon className={cls.icon} />
+            <span className={cls.link}>{t(item.text)}</span>
+        </Link>
+    );
 });

@@ -10,17 +10,17 @@ interface LangSwitcherProps {
 }
 
 export const LangSwitcher = memo(({ className, short }: LangSwitcherProps) => {
-  const { t, i18n } = useTranslation();
-  const toggle = () => {
-    i18n.changeLanguage(i18n.language === 'en' ? 'ro' : 'en');
-  };
-  return (
-    <Button
-      className={classNames('', {}, [className])}
-      theme={ButtonTheme.CLEAR}
-      onClick={toggle}
-    >
-      {t(short ? 'Shorten' : 'Language')}
-    </Button>
-  );
+    const { t, i18n } = useTranslation();
+    const toggle = () => {
+        i18n.changeLanguage(i18n.language === 'en' ? 'ro' : 'en');
+    };
+    return (
+        <Button
+            className={classNames('', {}, [className])}
+            theme={ButtonTheme.CLEAR}
+            onClick={toggle}
+        >
+            {t(short ? 'Shorten' : 'Language')}
+        </Button>
+    );
 });

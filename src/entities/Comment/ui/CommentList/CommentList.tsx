@@ -15,31 +15,31 @@ interface CommentListProps {
 }
 
 export const CommentList = memo(
-  ({ className, comments, isLoading }: CommentListProps) => {
-    const { t } = useTranslation();
-    if (isLoading) {
-      return (
-        <VStack gap="16" max>
-          <CommentCard isLoading />
-          <CommentCard isLoading />
-          <CommentCard isLoading />
-        </VStack>
-      );
-    }
-    return (
-      <VStack gap="16" max className={classNames('', {}, [className])}>
-        {comments?.length ? (
-          comments.map((comment) => (
-            <CommentCard
-              comment={comment}
-              key={comment.id}
-              isLoading={isLoading}
-            />
-          ))
-        ) : (
-          <Text text={t('No comments')} />
-        )}
-      </VStack>
-    );
-  },
+    ({ className, comments, isLoading }: CommentListProps) => {
+        const { t } = useTranslation();
+        if (isLoading) {
+            return (
+                <VStack gap="16" max>
+                    <CommentCard isLoading />
+                    <CommentCard isLoading />
+                    <CommentCard isLoading />
+                </VStack>
+            );
+        }
+        return (
+            <VStack gap="16" max className={classNames('', {}, [className])}>
+                {comments?.length ? (
+                    comments.map((comment) => (
+                        <CommentCard
+                            comment={comment}
+                            key={comment.id}
+                            isLoading={isLoading}
+                        />
+                    ))
+                ) : (
+                    <Text text={t('No comments')} />
+                )}
+            </VStack>
+        );
+    },
 );

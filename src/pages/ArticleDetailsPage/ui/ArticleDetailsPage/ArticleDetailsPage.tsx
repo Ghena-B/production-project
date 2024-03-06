@@ -7,12 +7,14 @@ import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetails
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 
 import { ArticleDetails } from '@/entities/Article';
+import { Counter } from '@/entities/Counter';
 import { ArticleRating } from '@/features/articleRating';
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList';
+import { getFeatureFlag } from '@/shared/features';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
-  DynamicModuleLoader,
-  ReducerList,
+    DynamicModuleLoader,
+    ReducerList,
 } from '@/shared/lib/components/DynanmicModuleLoader/DynamicModuleLoader';
 import { VStack } from '@/shared/ui/Stack';
 import { Page } from '@/widgets/Page';
@@ -24,29 +26,32 @@ interface ArticleDetailsPageProps {
 }
 
 const reducers: ReducerList = {
-  articleDetailsPage: articleDetailsPageReducer,
+    articleDetailsPage: articleDetailsPageReducer,
 };
 
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
-  const { t } = useTranslation('article');
-  const { id } = useParams<{ id: string }>();
-  if (!id) {
-    return null;
-  }
-  return (
-    <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <Page
-        className={classNames(cls.ArticleDetailsPage, {}, [className])}
-      >
-        <VStack gap="16" max>
-          <ArticleDetailsPageHeader />
-          <ArticleDetails id={id} />
-          <ArticleRating articleId={id} />
-          <ArticleRecommendationsList />
-          <ArticleDetailsComments id={id} />
-        </VStack>
-      </Page>
-    </DynamicModuleLoader>
-  );
+    const { t } = useTranslation('article');
+    const { id } = useParams<{ id: string }>();
+    const isArticleRatingEnabled = getFeatureFlag('isArticleRatingEnabled');
+    const isCounterEnabled = getFeatureFlag('isCounterEnabled');
+    if (!id) {
+        return null;
+    }
+    return (
+        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+            <Page
+                className={classNames(cls.ArticleDetailsPage, {}, [className])}
+            >
+                <VStack gap="16" max>
+                    <ArticleDetailsPageHeader />
+                    <ArticleDetails id={id} />
+                    {isCounterEnabled && <Counter />}
+                    {isArticleRatingEnabled && <ArticleRating articleId={id} />}
+                    <ArticleRecommendationsList />
+                    <ArticleDetailsComments id={id} />
+                </VStack>
+            </Page>
+        </DynamicModuleLoader>
+    );
 };
 export default memo(ArticleDetailsPage);

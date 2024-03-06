@@ -8,8 +8,8 @@ export { ArticleList } from './ui/ArticleList/ArticleList';
 
 export { getArticleDetailsData } from './model/selectors/articleDetails';
 export {
-  ArticleSortField,
-  ArticleType,
-  ArticleView,
-  ArticleBlockType,
+    ArticleSortField,
+    ArticleType,
+    ArticleView,
+    ArticleBlockType,
 } from './model/consts/articleConsts';

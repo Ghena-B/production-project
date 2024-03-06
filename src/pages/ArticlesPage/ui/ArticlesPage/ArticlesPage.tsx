@@ -12,8 +12,8 @@ import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters'
 
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
-  DynamicModuleLoader,
-  ReducerList,
+    DynamicModuleLoader,
+    ReducerList,
 } from '@/shared/lib/components/DynanmicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect';
@@ -25,34 +25,34 @@ interface ArticlesPageProps {
     className?: string;
 }
 const reducers: ReducerList = {
-  articlesPage: articlesPageReducer,
+    articlesPage: articlesPageReducer,
 };
 const ArticlesPage = (props: ArticlesPageProps) => {
-  const { className } = props;
-  const { t } = useTranslation();
-  const dispatch = useAppDispatch();
-  const inited = useSelector(getArticlesPageInited);
-  const [searchParams] = useSearchParams();
-  const onLoadNextPart = useCallback(() => {
-    dispatch(fetchNextArticlesPage());
-  }, [dispatch]);
-  useInitialEffect(() => {
-    if (!inited) {
-      dispatch(initArticlesPage(searchParams));
-    }
-  });
-  return (
-    <DynamicModuleLoader reducers={reducers}>
-      <Page
-        data-testid="ArticlesPage"
-        onScrollEnd={onLoadNextPart}
-        className={classNames(cls.ArticlesPage, {}, [className])}
-      >
-        <ArticlesPageFilters />
-        <ArticleInfiniteList className={cls.list} />
-      </Page>
-    </DynamicModuleLoader>
-  );
+    const { className } = props;
+    const { t } = useTranslation();
+    const dispatch = useAppDispatch();
+    const inited = useSelector(getArticlesPageInited);
+    const [searchParams] = useSearchParams();
+    const onLoadNextPart = useCallback(() => {
+        dispatch(fetchNextArticlesPage());
+    }, [dispatch]);
+    useInitialEffect(() => {
+        if (!inited) {
+            dispatch(initArticlesPage(searchParams));
+        }
+    });
+    return (
+        <DynamicModuleLoader reducers={reducers}>
+            <Page
+                data-testid="ArticlesPage"
+                onScrollEnd={onLoadNextPart}
+                className={classNames(cls.ArticlesPage, {}, [className])}
+            >
+                <ArticlesPageFilters />
+                <ArticleInfiniteList className={cls.list} />
+            </Page>
+        </DynamicModuleLoader>
+    );
 };
 
 export default memo(ArticlesPage);
