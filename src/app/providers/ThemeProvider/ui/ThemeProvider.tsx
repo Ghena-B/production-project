@@ -1,4 +1,4 @@
-import React, { ReactNode, useMemo, useState } from 'react';
+import React, { ReactNode, useEffect, useMemo, useState } from 'react';
 
 import { useJsonSettings } from '@/entities/User';
 import { Theme } from '@/shared/const/theme';
@@ -10,8 +10,19 @@ interface ThemeProviderProps {
 }
 
 const ThemeProvider = ({ children, initialTheme }: ThemeProviderProps) => {
-    const { theme: defaultTheme = Theme.LIGHT } = useJsonSettings();
-    const [theme, setTheme] = useState<Theme>(initialTheme || defaultTheme);
+    const { theme: defaultTheme } = useJsonSettings();
+    const [isThemeInited, setThemeInited] = useState(false);
+
+    const [theme, setTheme] = useState<Theme>(
+        initialTheme || defaultTheme || Theme.LIGHT,
+    );
+
+    useEffect(() => {
+        if (!isThemeInited && defaultTheme) {
+            setTheme(defaultTheme);
+            setThemeInited(true);
+        }
+    }, [defaultTheme, isThemeInited]);
 
     const defaultProps = useMemo(
         () => ({
