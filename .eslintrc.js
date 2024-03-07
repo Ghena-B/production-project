@@ -62,6 +62,7 @@ module.exports = {
                     'gap',
                     'role',
                     'border',
+                    'feature',
                 ],
             },
         ],
@@ -120,6 +121,7 @@ module.exports = {
             },
         ],
         'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
+        'react/jsx-wrap-multilines': 'off',
     },
     globals: {
         __IS_DEV__: true,
