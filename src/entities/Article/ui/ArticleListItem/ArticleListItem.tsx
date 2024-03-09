@@ -12,13 +12,13 @@ import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleT
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
 import { getRouteArticleDetails } from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { AppImage } from '@/shared/ui/AppImage';
-import { Avatar } from '@/shared/ui/Avatar';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
-import { Card } from '@/shared/ui/Card';
-import { Icon } from '@/shared/ui/Icon';
-import { Skeleton } from '@/shared/ui/Skeleton';
-import { Text } from '@/shared/ui/Text';
+import { AppImage } from '@/shared/ui/deprecated/AppImage';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Card } from '@/shared/ui/deprecated/Card';
+import { Icon } from '@/shared/ui/deprecated/Icon';
+import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
+import { Text } from '@/shared/ui/deprecated/Text';
 
 import cls from './ArticleListItem.module.scss';
 
@@ -30,9 +30,7 @@ interface ArticleListItemProps {
 }
 
 export const ArticleListItem = memo(
-    ({
-        className, article, view, target,
-    }: ArticleListItemProps) => {
+    ({ className, article, view, target }: ArticleListItemProps) => {
         const { t } = useTranslation();
         const types = (
             <Text text={article.type.join(', ')} className={cls.types} />

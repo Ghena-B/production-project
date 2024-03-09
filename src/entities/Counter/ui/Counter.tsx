@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useCounterValue } from '../model/selectors/getCounterValue/getCounterValue';
 import { counterActions } from '../model/slice/counterSlice';
 
-import { Button } from '@/shared/ui/Button';
+import { Button } from '@/shared/ui/deprecated/Button';
 
 const Counter = () => {
     const dispatch = useDispatch();
@@ -18,10 +18,7 @@ const Counter = () => {
     return (
         <div>
             {/* eslint-disable-next-line i18next/no-literal-string */}
-            <h1 data-testid="value-title">
-                value =
-                {counterValue}
-            </h1>
+            <h1 data-testid="value-title">value ={counterValue}</h1>
             {/* eslint-disable-next-line i18next/no-literal-string */}
             <Button data-testid="increment-btn" onClick={increment}>
                 increment

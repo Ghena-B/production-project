@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { Country } from '../../model/types/country';
 
-import { ListBox } from '@/shared/ui/Popups';
+import { ListBox } from '@/shared/ui/deprecated/Popups';
 
 interface CountrySelectProps {
     className?: string;
@@ -18,9 +18,7 @@ const options = [
     { value: Country.SPAIN, content: Country.SPAIN },
 ];
 export const CountrySelect = memo(
-    ({
-        className, value, onChange, readonly,
-    }: CountrySelectProps) => {
+    ({ className, value, onChange, readonly }: CountrySelectProps) => {
         const { t } = useTranslation();
         const onChangeHandler = useCallback(
             (value: string) => {

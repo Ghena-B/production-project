@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { Currency } from '../../model/types/currency';
 
-import { ListBox } from '@/shared/ui/Popups';
+import { ListBox } from '@/shared/ui/deprecated/Popups';
 
 interface CurrencySelectProps {
     className?: string;
@@ -17,9 +17,7 @@ const options = [
     { value: Currency.USD, content: Currency.USD },
 ];
 export const CurrencySelect = memo(
-    ({
-        className, value, onChange, readonly,
-    }: CurrencySelectProps) => {
+    ({ className, value, onChange, readonly }: CurrencySelectProps) => {
         const { t } = useTranslation();
         const onChangeHandler = useCallback(
             (value: string) => {

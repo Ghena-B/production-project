@@ -28,9 +28,6 @@ module.exports = {
         'import',
     ],
     rules: {
-        'react/jsx-indent': [2, 4],
-        indent: [2, 4],
-        'react/jsx-indent-props': [2, 4],
         'react/jsx-filename-extension': [
             2,
             { extensions: ['.js', '.jsx', '.tsx'] },
@@ -122,6 +119,11 @@ module.exports = {
         ],
         'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
         'react/jsx-wrap-multilines': 'off',
+        'object-curly-newline': 'off',
+        indent: ['error', 4, { SwitchCase: 1 }],
+        'react/jsx-indent': ['error', 4],
+        'react/jsx-indent-props': ['error', 4],
+        'react/jsx-one-expression-per-line': 'off',
     },
     globals: {
         __IS_DEV__: true,
