@@ -17,5 +17,12 @@
     "Incorrect age": "Vârsta incorectă",
     "Incorrect country": "Țara incorectă",
     "No data": "Nicio informație",
-    "Profile not found": "Profile not found"
+    "Profile not found": "Profile not found",
+  "Avatar": "Avatar",
+    "Username": "Username",
+    "City": "City",
+    "Age": "Age",
+    "Lastname": "Lastname",
+    "Firstname": "Firstname",
+    "Avatar URL": "Avatar URL"
 }
