@@ -1,18 +1,45 @@
 .InputWrapper {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    align-items: center;
+    border-radius: 48px;
+    padding: 8px 16px;
+    border: 2px solid var(--icon-redesigned);
+    height: 32px;
+    width: 100%;
 }
 
-input {
-    height: 48px;
-    width: 400px;
-    border-radius: 8px;
-    border: 1px solid grey;
-    padding-left: 8px;
-    background-color: var(--bg-color);
-    color: var(--secondary-color);
+.addonLeft, .addonRight {
+    display: flex;
 }
+
+.withAddonLeft {
+    padding-left: 8px;
+}
+
+.withAddonRight {
+    padding-right: 8px;
+}
+
+.focused {
+    border: 2px solid var(--accent-redesigned);
+
+    .addonLeft svg, .addonRight svg {
+        color: var(--accent-redesigned);
+    }
+}
+
+.input {
+    border: none;
+    outline: none;
+    width: 100%;
+    color: var(--text-redesigned);
+    background: none;
+
+    &::placeholder {
+        color: var(--hint-redesigned);
+    }
+}
+
 
 .readonly {
     opacity: 0.7;
