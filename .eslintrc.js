@@ -62,6 +62,8 @@ module.exports = {
                     'feature',
                     'color',
                     'variant',
+                    'size',
+                    'wrap',
                 ],
             },
         ],
@@ -126,6 +128,7 @@ module.exports = {
         'react/jsx-indent': ['error', 4],
         'react/jsx-indent-props': ['error', 4],
         'react/jsx-one-expression-per-line': 'off',
+        'implicit-arrow-linebreak': 'off',
     },
     globals: {
         __IS_DEV__: true,
