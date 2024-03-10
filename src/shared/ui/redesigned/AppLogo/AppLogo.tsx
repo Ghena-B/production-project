@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 
 import AppSvg from '../../../assets/icons/app-image.svg';
-import { HStack } from '../../deprecated/Stack';
+import { HStack } from '../Stack';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
 
