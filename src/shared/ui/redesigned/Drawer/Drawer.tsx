@@ -1,8 +1,9 @@
 import React, { memo, ReactNode, useCallback, useEffect } from 'react';
 
-import { Overlay } from '../../redesigned/Overlay/Overlay';
-import { Portal } from '../../redesigned/Portal/Portal';
+import { Overlay } from '../Overlay/Overlay';
+import { Portal } from '../Portal/Portal';
 
+import { toggleFeatures } from '@/shared/features';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     AnimationProvider,
@@ -84,12 +85,17 @@ export const DrawerContent = memo((props: DrawerProps) => {
     const display = y.to((py) => (py < height ? 'block' : 'none'));
 
     return (
-        <Portal>
+        <Portal element={document.getElementById('app') ?? document.body}>
             <div
                 className={classNames(cls.Drawer, {}, [
                     className,
                     theme,
                     'app_drawer',
+                    toggleFeatures({
+                        name: 'isAppRedesigned',
+                        on: () => cls.drawerNew,
+                        off: () => cls.drawerOld,
+                    }),
                 ])}
             >
                 <Overlay onClick={close} />
