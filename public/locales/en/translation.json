@@ -55,9 +55,14 @@
     "Your feedback": "Your feedback",
     "Close": "Close",
     "Thank you for your feedback!": "Thank you for your feedback!",
-  "Admin Panel": "Admin Panel",
-  "Welcome to the articles page": "Welcome to the articles page",
+    "Admin Panel": "Admin Panel",
+    "Welcome to the articles page": "Welcome to the articles page",
     "Here you can find interesting articles on different topics": "Here you can find interesting articles on different topics",
-  "User's settings": "User's settings",
-    "Interface themes": "Interface themes"
+    "User's settings": "User's settings",
+    "Interface themes": "Interface themes",
+    "Edit": "Edit",
+    "{{count}} views_zero": "{{count}} views",
+    "{{count}} views_one": "{{count}} view",
+    "{{count}} views_few": "{{count}} views",
+    "{{count}} views_other": "{{count}} views"
 }
