@@ -1368,6 +1368,18 @@
       "userId": "1",
       "text": "nice",
       "id": "wmLzfqt"
+    },
+    {
+      "articleId": "4",
+      "userId": "1",
+      "text": "here is another comment. this article is great but it always can be better",
+      "id": "UaVoiaa"
+    },
+    {
+      "articleId": "4",
+      "userId": "1",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam, deserunt, dolore dolores eos facilis, itaque magnam molestias     nihil possimus quasi reiciendis sapiente sint suscipit voluptates! Accusantium enim ex vitae.",
+      "id": "iQrsFd3"
     }
   ],
   "users": [
@@ -1384,7 +1396,7 @@
         "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_green_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false,
         "isArticlesPageWasOpened": true

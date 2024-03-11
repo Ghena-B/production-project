@@ -1,27 +1,25 @@
 import { memo, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 
-import StarIcon from '../../../assets/icons/star.svg';
-import { Icon } from '../Icon';
+import { Icon } from '../../redesigned/Icon';
+import { Icon as IconDeprecated } from '../Icon/Icon';
 
+import StarIcon from '@/shared/assets/icons/star.svg';
+import { ToggleFeatures, toggleFeatures } from '@/shared/features';
 import { classNames } from '@/shared/lib/classNames/classNames';
 
 import cls from './StarRating.module.scss';
 
 interface StarRatingProps {
     className?: string;
-    onSelect?: (starCount: number) => void;
+    onSelect?: (starsCount: number) => void;
     size?: number;
     selectedStars?: number;
 }
+
 const stars = [1, 2, 3, 4, 5];
-/**
- * @deprecated
- */
+
 export const StarRating = memo((props: StarRatingProps) => {
     const { className, size = 30, selectedStars = 0, onSelect } = props;
-    const { t } = useTranslation();
-
     const [currentStarsCount, setCurrentStarsCount] = useState(selectedStars);
     const [isSelected, setIsSelected] = useState(Boolean(selectedStars));
 
@@ -44,11 +42,22 @@ export const StarRating = memo((props: StarRatingProps) => {
             setIsSelected(true);
         }
     };
+
     return (
-        <div className={classNames(cls.StarRating, {}, [className])}>
-            {stars.map((starNumber) => (
-                <Icon
-                    className={classNames(
+        <div
+            className={classNames(
+                toggleFeatures({
+                    name: 'isAppRedesigned',
+                    off: () => cls.StarRating,
+                    on: () => cls.StarRatingRedesigned,
+                }),
+                {},
+                [className],
+            )}
+        >
+            {stars.map((starNumber) => {
+                const commonProps = {
+                    className: classNames(
                         cls.starIcon,
                         { [cls.selected]: isSelected },
                         [
@@ -56,16 +65,25 @@ export const StarRating = memo((props: StarRatingProps) => {
                                 ? cls.hovered
                                 : cls.normal,
                         ],
-                    )}
-                    Svg={StarIcon}
-                    key={starNumber}
-                    onMouseEnter={onHover(starNumber)}
-                    onMouseLeave={onLeave}
-                    onClick={onClick(starNumber)}
-                    data-testid={`StarRating.${starNumber}`}
-                    data-selected={currentStarsCount >= starNumber}
-                />
-            ))}
+                    ),
+                    Svg: StarIcon,
+                    key: starNumber,
+                    width: size,
+                    height: size,
+                    onMouseLeave: onLeave,
+                    onMouseEnter: onHover(starNumber),
+                    onClick: onClick(starNumber),
+                    'data-testid': `StarRating.${starNumber}`,
+                    'data-selected': currentStarsCount >= starNumber,
+                };
+                return (
+                    <ToggleFeatures
+                        feature="isAppRedesigned"
+                        on={<Icon clickable={!isSelected} {...commonProps} />}
+                        off={<IconDeprecated {...commonProps} />}
+                    />
+                );
+            })}
         </div>
     );
 });
