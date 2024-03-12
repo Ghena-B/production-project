@@ -113,7 +113,11 @@ export const ArticleListItemSkeleton = memo(
                 <ToggleFeatures
                     feature="isAppRedesigned"
                     on={
-                        <CardRedesigned border="round" className={cls.card}>
+                        <CardRedesigned
+                            border="round"
+                            className={cls.card}
+                            padding="0"
+                        >
                             {cardContent}
                         </CardRedesigned>
                     }

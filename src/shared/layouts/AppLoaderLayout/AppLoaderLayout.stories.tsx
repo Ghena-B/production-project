@@ -12,6 +12,7 @@ export default {
 } as ComponentMeta<typeof AppLoaderLayout>;
 
 const Template: ComponentStory<typeof AppLoaderLayout> = (args) => (
+    // @ts-ignore
     <AppLoaderLayout {...args} />
 );
 
