@@ -9,7 +9,7 @@ describe('button', () => {
     });
     test('check clear class', () => {
         render(<Button variant="outline">TEST</Button>);
-        expect(screen.getByText('TEST')).toHaveClass('clear');
+        expect(screen.getByText('TEST')).toHaveClass('outline');
         screen.debug();
     });
 });

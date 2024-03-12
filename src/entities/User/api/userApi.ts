@@ -28,7 +28,6 @@ const userApi = rtkApi.injectEndpoints({
     overrideExisting: false,
 });
 
-export const setJsonSettingsMutation =
-    userApi.endpoints.setJsonSettings.initiate;
+export const setJsonSettingsMutation = userApi.endpoints.setJsonSettings.initiate;
 
 export const getUserDataByIdQuery = userApi.endpoints.getUserDataById.initiate;
