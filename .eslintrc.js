@@ -24,7 +24,6 @@ module.exports = {
         'i18next',
         'react-hooks',
         'ghenabujag-plugin',
-        'unused-imports',
         'import',
     ],
     rules: {
@@ -76,7 +75,6 @@ module.exports = {
         'no-param-reassign': 'off',
         'no-undef': 'off',
         'no-unused-vars': 'off',
-        'unused-imports/no-unused-imports': 'error',
         'ghenabujag-plugin/path-checker': ['error', { alias: '@' }],
         'ghenabujag-plugin/public-api-imports': [
             'error',
