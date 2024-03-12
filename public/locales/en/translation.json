@@ -64,5 +64,9 @@
     "{{count}} views_zero": "{{count}} views",
     "{{count}} views_one": "{{count}} view",
     "{{count}} views_few": "{{count}} views",
-    "{{count}} views_other": "{{count}} views"
+    "{{count}} views_other": "{{count}} views",
+    "Profile": "Profile",
+    "Articles": "Articles",
+    "Admin": "Admin",
+    "Read more...": "Read more..."
 }
